@@ -74,6 +74,61 @@
 \RequirePackage[skins]{tcolorbox}
 \RequirePackage{fancyhdr}
 
+% Conditional compilation system
+\RequirePackage{xstring}
+
+% Define all available toggles
+% Role-based toggles
+\newtoggle{firmware}
+\newtoggle{ai}
+\newtoggle{consulting}
+\newtoggle{executive}
+\newtoggle{general}
+
+% Feature toggles
+\newtoggle{technical}
+\newtoggle{detailed}
+\newtoggle{quantified}
+\newtoggle{businessfocus}
+
+% Length control toggles
+\newtoggle{onepage}
+\newtoggle{twopage}
+\newtoggle{fullversion}
+
+% Default all toggles to false
+\togglefalse{firmware}
+\togglefalse{ai}
+\togglefalse{consulting}
+\togglefalse{executive}
+\togglefalse{general}
+\togglefalse{technical}
+\togglefalse{detailed}
+\togglefalse{quantified}
+\togglefalse{businessfocus}
+\togglefalse{onepage}
+\togglefalse{twopage}
+\toggletrue{fullversion}
+
+% Utility commands for conditional content
+\newcommand{\whenrole}[2]{%
+  \iftoggle{#1}{#2}{}%
+}
+
+\newcommand{\whennotrole}[2]{%
+  \iftoggle{#1}{}{#2}%
+}
+
+\newcommand{\whenany}[2]{%
+  % Usage: \whenany{role1,role2}{content}
+  % Note: Simple implementation - for complex cases use nested conditions
+  #2%
+}
+
+% Length-aware commands
+\newcommand{\whenonepage}[1]{\iftoggle{onepage}{#1}{}}
+\newcommand{\whentwopage}[1]{\iftoggle{twopage}{#1}{}}
+\newcommand{\whenfull}[1]{\iftoggle{fullversion}{#1}{}}
 
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
