@@ -218,13 +218,67 @@ To verify the tag-based system is working correctly:
    - Skills sections show relevant expertise
    - Projects appear based on version logic
 
+## Enhanced Features
+
+### Quantified Achievements System
+The CV now includes comprehensive metrics and quantified achievements:
+- **Performance metrics**: 96% test coverage, 99.9% uptime, 87% ML accuracy
+- **Business impact**: \$2M+ funding enabled, \$50K annual savings, 3:1 ROI
+- **Leadership results**: 5-person team, 100% promotion rate, 45% efficiency improvement
+
+### Progressive Disclosure
+Content is organized in priority levels:
+- **Priority 1**: Core achievements (always shown)
+- **Priority 2**: Standard details (hidden in executive version)  
+- **Priority 3**: Additional details (full version only)
+
+### Executive One-Page Version
+Streamlined format optimized for senior leadership roles:
+- Executive summary with quantified impact
+- 3-category skills section with key metrics
+- Leadership-focused achievements only
+
+## Advanced Usage
+
+### Enhanced Commands
+```latex
+% Quantified achievement pattern
+\achievement{Led firmware development}{
+  delivering system 15% ahead of schedule
+}{
+  enabling \$2M+ funding milestone
+}
+
+% Priority-based content
+\priority{1}{Always shown core content}
+\priority{2}{Standard details - not in executive}
+\priority{3}{Full version additional details}
+
+% Role-specific metrics
+\techmetric{Technical metrics for firmware/AI roles}
+\leadmetric{Leadership metrics for consulting/executive}
+\businessimpact{Business value for consulting/executive}
+```
+
+## Documentation
+
+### Complete Guide Collection
+- **[METRICS_INVENTORY.md](content/METRICS_INVENTORY.md)**: Comprehensive quantifiable achievements
+- **[METRICS_MAPPING.md](content/METRICS_MAPPING.md)**: Implementation patterns and examples
+- **[VALIDATION_TESTING.md](content/VALIDATION_TESTING.md)**: Testing procedures for all versions
+- **[MAINTENANCE_GUIDE.md](content/MAINTENANCE_GUIDE.md)**: Ongoing system maintenance
+
 ## Maintenance
 
 When updating the CV:
 1. Make changes in the appropriate section file in `sections/`
-2. Use conditionals (`\whenrole{version}{}`, `\iftoggle{toggle}{}`) to control visibility
-3. Test all 5 versions to ensure changes appear correctly
-4. Commit changes with descriptive messages
+2. Use enhanced conditionals (`\achievement{}{}{}`, `\priority{}{}`, `\metric{}`)
+3. Update metrics inventory when adding quantified achievements
+4. Test all 5 versions to ensure changes appear correctly
+5. Follow maintenance guide for systematic updates
+6. Commit changes with descriptive messages
+
+See `content/MAINTENANCE_GUIDE.md` for detailed update procedures.
 
 ## Acknowledgments
 

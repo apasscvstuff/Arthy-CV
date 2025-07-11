@@ -184,6 +184,31 @@
   #1\metric{ #2}\businessimpact{ #3}%
 }
 
+% Executive version space optimizations
+\newcommand{\execspace}[1]{%
+  % Reduce spacing in executive version
+  \iftoggle{onepage}{\vspace{#1}}{}%
+}
+
+% Conditional section breaks for length control
+\newcommand{\pagebreak}[0]{%
+  % Only break page if not in executive mode
+  \iftoggle{onepage}{}{\newpage}%
+}
+
+% Compact list formatting for executive
+\newcommand{\compactlist}[1]{%
+  \iftoggle{onepage}{%
+    \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+      #1
+    \end{itemize}
+  }{%
+    \begin{itemize}
+      #1
+    \end{itemize}
+  }%
+}
+
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
 \definecolor{basecolor}{HTML}{000066}       %BLUE
