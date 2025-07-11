@@ -191,10 +191,7 @@
 }
 
 % Conditional section breaks for length control
-\newcommand{\pagebreak}[0]{%
-  % Only break page if not in executive mode
-  \iftoggle{onepage}{}{\newpage}%
-}
+
 
 % Compact list formatting for executive
 \newcommand{\compactlist}[1]{%
