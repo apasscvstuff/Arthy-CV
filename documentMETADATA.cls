@@ -130,6 +130,60 @@
 \newcommand{\whentwopage}[1]{\iftoggle{twopage}{#1}{}}
 \newcommand{\whenfull}[1]{\iftoggle{fullversion}{#1}{}}
 
+% Enhanced quantification and metrics controls
+\newcommand{\withmetric}[2]{%
+  % Show metric if quantified toggle is true, otherwise show alternative
+  \iftoggle{quantified}{#1}{#2}%
+}
+
+\newcommand{\metric}[1]{%
+  % Show metric only if quantified toggle is true
+  \iftoggle{quantified}{#1}{}%
+}
+
+\newcommand{\businessimpact}[1]{%
+  % Show business impact if businessfocus toggle is true
+  \iftoggle{businessfocus}{#1}{}%
+}
+
+% Progressive disclosure system based on priority levels
+\newcommand{\priority}[2]{%
+  % Priority 1: Always include (core achievements)
+  % Priority 2: Include unless executive/onepage (standard details)  
+  % Priority 3: Include only in fullversion (additional details)
+  \ifnum#1=1 #2\fi
+  \ifnum#1=2 \iftoggle{onepage}{}{#2}\fi
+  \ifnum#1=3 \iftoggle{fullversion}{#2}{}\fi
+}
+
+% Role-specific metric display
+\newcommand{\techmetric}[1]{%
+  % Technical metrics for firmware/ai roles
+  \iftoggle{firmware}{#1}{}%
+  \iftoggle{ai}{#1}{}%
+}
+
+\newcommand{\leadmetric}[1]{%
+  % Leadership metrics for consulting/executive roles
+  \iftoggle{consulting}{#1}{}%
+  \iftoggle{executive}{#1}{}%
+}
+
+% Combined conditional for common patterns
+\newcommand{\detailedtech}[1]{%
+  % Show detailed technical content unless executive
+  \iftoggle{executive}{}{%
+    \iftoggle{detailed}{#1}{}%
+  }%
+}
+
+% Quantified achievement pattern: Action + Metric + Impact
+\newcommand{\achievement}[3]{%
+  % Usage: \achievement{action}{metric}{impact}
+  % Shows: action + (metric if quantified) + (impact if businessfocus)
+  #1\metric{ #2}\businessimpact{ #3}%
+}
+
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
 \definecolor{basecolor}{HTML}{000066}       %BLUE
