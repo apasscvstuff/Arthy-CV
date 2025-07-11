@@ -1,122 +1,70 @@
 \sectionTitle{Technical Expertise}{\faTasks}
 
-\begin{keywords}
-  % Executive version - streamlined for impact
-  \whenrole{executive}{
+% Executive version - streamlined for impact
+\whenrole{executive}{
+  \begin{keywords}
     \keywordsentry{Leadership \& Impact}{Technical Team Leadership \leadmetric{(7+ Direct Reports)} • Cross-functional Coordination \metric{(12+ Stakeholders)} • Strategic Technical Decisions \businessimpact{(\$2M+ Clinical Trial Impact)}}
     \keywordsentry{Technical Domains}{Medical Device Innovation \techmetric{(ISO-13485/IEC-62304)} • Embedded Systems Architecture • AI/ML Implementation \metric{(Production Ready)}}
     \keywordsentry{Delivery \& Excellence}{Agile/Scrum Implementation \leadmetric{(100\% On-Time Delivery)} • Regulatory Compliance • Quality Systems \businessimpact{• Risk Management}}
+  \end{keywords}
+}
+
+% Technical versions - clean 3-column table format
+\whennotrole{executive}{
+  \vspace{-2mm}
+  \begin{center}
+  \begin{tabular}{p{0.32\textwidth} | p{0.32\textwidth} | p{0.32\textwidth}}
+    \textbf{Programming \& Core Tech} & \textbf{Domain Expertise} & \textbf{Tools \& Platforms} \\
+    \hline
+    \\[-1ex]
+    
+    % Programming Languages Row
+    \whenrole{ai}{\checkmark\, Python (Expert)} & \whenrole{ai}{\checkmark\, AI \& LLMs} & \whenrole{ai}{\checkmark\, PyTorch / TensorFlow} \\
+    \whenrole{consulting}{\checkmark\, Python (Expert)} & \whenrole{consulting}{\checkmark\, Technical Consulting} & \whenrole{consulting}{\checkmark\, FastAPI / Streamlit} \\
+    \whenrole{firmware}{\checkmark\, C/C++ (Expert)} & \whenrole{firmware}{\checkmark\, Embedded Systems} & \whenrole{firmware}{\checkmark\, FreeRTOS / STM32} \\
+    \whenrole{general}{\checkmark\, Python (Expert)} & \whenrole{general}{\checkmark\, System Architecture} & \whenrole{general}{\checkmark\, Git / Docker} \\
+    
+    \whenrole{ai}{\checkmark\, C/C++} & \whenrole{ai}{\checkmark\, OpenAI / Anthropic APIs} & \whenrole{ai}{\checkmark\, FAISS / Vector DBs} \\
+    \whenrole{consulting}{\checkmark\, JavaScript / SQL} & \whenrole{consulting}{\checkmark\, Strategic AI Consulting} & \whenrole{consulting}{\checkmark\, Docker / Git} \\
+    \whenrole{firmware}{\checkmark\, Python} & \whenrole{firmware}{\checkmark\, Medical Device Development} & \whenrole{firmware}{\checkmark\, FPGA / VHDL} \\
+    \whenrole{general}{\checkmark\, C/C++} & \whenrole{general}{\checkmark\, Medical Device Development} & \whenrole{general}{\checkmark\, PyTorch / TensorFlow} \\
+    
+    \whenrole{ai}{\checkmark\, JavaScript / SQL} & \whenrole{ai}{\checkmark\, RAG Systems} & \whenrole{ai}{\checkmark\, HuggingFace / Streamlit} \\
+    \whenrole{consulting}{\checkmark\, R} & \whenrole{consulting}{\checkmark\, Cross-cultural Communication} & \whenrole{consulting}{\checkmark\, pytest / CI-CD} \\
+    \whenrole{firmware}{\checkmark\, VHDL / Assembly} & \whenrole{firmware}{\checkmark\, ISO-13485 / IEC-62304} & \whenrole{firmware}{\checkmark\, JTAG / Debugging} \\
+    \whenrole{general}{\checkmark\, JavaScript / Scala} & \whenrole{general}{\checkmark\, ISO-13485 / IEC-62304} & \whenrole{general}{\checkmark\, NumPy / Pandas} \\
+    
+    % Advanced Skills Row
+    \whenrole{ai}{\checkmark\, R} & \whenrole{ai}{\checkmark\, Computer Vision (CLIP/ViT)} & \whenrole{ai}{\checkmark\, MPS Acceleration} \\
+    \whenrole{consulting}{} & \whenrole{consulting}{\checkmark\, Stakeholder Management} & \whenrole{consulting}{\checkmark\, Technical Training} \\
+    \whenrole{firmware}{\checkmark\, Shell Scripting} & \whenrole{firmware}{\checkmark\, Safety-Critical Systems} & \whenrole{firmware}{\checkmark\, SPI / I2C / UART} \\
+    \whenrole{general}{} & \whenrole{general}{\checkmark\, Project Management} & \whenrole{general}{\checkmark\, JIRA / Agile} \\
+    
+    % Specialized Skills Row
+    \whenrole{ai}{} & \whenrole{ai}{\checkmark\, Model Optimization} & \whenrole{ai}{\checkmark\, Prompt Engineering} \\
+    \whenrole{consulting}{} & \whenrole{consulting}{\checkmark\, Business Impact Analysis} & \whenrole{consulting}{\checkmark\, Process Improvement} \\
+    \whenrole{firmware}{} & \whenrole{firmware}{\checkmark\, Hardware-Software Integration} & \whenrole{firmware}{\checkmark\, BLE / WiFi / Ethernet} \\
+    \whenrole{general}{} & \whenrole{general}{\checkmark\, Technical Documentation} & \whenrole{general}{\checkmark\, Performance Profiling} \\
+    
+  \end{tabular}
+  \end{center}
+  
+  \vspace{3mm}
+  
+  % Additional technical education section for AI/consulting roles
+  \whenrole{ai}{
+    \begin{center}
+    \textbf{Technical Education \& Communication}\\
+    \vspace{1mm}
+    \checkmark\, AI/ML Training Design (100+ Students, 4.8/5.0 Rating) • \checkmark\, Cross-cultural Communication • \checkmark\, Pedagogical Innovation
+    \end{center}
   }
   
-  % Technical versions - detailed expertise
-  \whennotrole{executive}{
-    \priority{1}{
-      % Core programming languages - always shown
-      \keywordsentry{Programming Languages}{
-        \techmetric{Python (Expert) • C/C++ (Expert) • }
-        \whenrole{firmware}{VHDL • Assembly • Shell Scripting}
-        \whenrole{ai}{JavaScript • SQL • R}
-        \whenrole{consulting}{JavaScript • SQL}
-        \whenrole{general}{VHDL • JavaScript • Scala}
-      }
-      
-      % AI/ML prominence for AI and consulting roles
-      \whenrole{ai}{
-        \keywordsentry{AI \& LLMs}{
-          OpenAI/Anthropic Integration • RAG Systems \techmetric{(99.5\% chunk quality)} • 
-          Vector Databases \metric{(FAISS)} • Prompt Engineering • 
-          HuggingFace Deployment \techmetric{(6x speedup)}
-        }
-        \keywordsentry{ML \& Data Science}{
-          PyTorch/TensorFlow \metric{(Expert)} • Model Optimization \techmetric{(Quantization, Pruning)} • 
-          Computer Vision \metric{(CLIP, ViT)} • NLP \techmetric{(Transformers)} • 
-          scikit-learn • Pandas/NumPy
-        }
-      }
-      
-      \whenrole{consulting}{
-        \keywordsentry{AI \& Technical Consulting}{
-          OpenAI/Anthropic APIs • RAG Implementation • Strategic AI Consulting • 
-          Technical Training \leadmetric{(100+ executives)} • Cross-cultural Communication
-        }
-      }
-      
-      % Medical device expertise for technical roles
-      \whennotrole{consulting}{
-        \keywordsentry{Medical Device Development}{
-          Regulatory Standards \techmetric{(ISO-13485, IEC-62304)} • 
-          Quality Systems \metric{• 100\% Compliance Rate} • 
-          Risk Management \businessimpact{• Safety-Critical Design} • 
-          Design Controls\whenrole{general}{ \& V\&V}
-        }
-      }
-    }
-    
-    \priority{2}{
-      % Software engineering and development tools
-      \whenrole{ai}{
-        \keywordsentry{Software Engineering}{
-          FastAPI • Streamlit • Docker \techmetric{(Production Ready)} • 
-          Git/CI-CD • pytest \metric{(67 unit tests)} • 
-          MPS Acceleration \techmetric{(Apple Silicon)} • Linux/macOS
-        }
-        \keywordsentry{Technical Education \& Communication}{
-          Training Design \leadmetric{(100+ Students • 4.8/5.0 Rating)} • 
-          Cross-cultural Communication • Educational Content Creation • 
-          Technical Documentation \metric{(Research Grade)}
-        }
-      }
-      
-      \whenrole{consulting}{
-        \keywordsentry{Technical Leadership \& Communication}{
-          Stakeholder Management \leadmetric{(12+ stakeholders)} • Strategic Consulting \businessimpact{(\$500K+ decisions)} • 
-          Cross-cultural Communication • Client Relations \leadmetric{(100\% retention)} • 
-          Technical Training \metric{(100+ executives)}
-        }
-        \keywordsentry{Business Impact \& Project Management}{
-          Project ROI \businessimpact{(3:1 achieved)} • Cost Optimization \metric{(\$50K+ saved)} • 
-          Process Improvement \businessimpact{(45\% efficiency gain)} • 
-          Agile/Scrum Implementation \metric{(45\% spillover reduction)}
-        }
-      }
-      
-      \keywordsentry{Embedded Systems}{
-        Real-time Design \techmetric{(FreeRTOS)} • Hardware Integration \metric{(99.9\% uptime)} • 
-        FPGA Development \techmetric{(Artix-7)} • Test Infrastructure \metric{(96\% coverage)} • 
-        Performance Optimization \businessimpact{(40\% improvement)}
-      }
-    }
-    
-    \priority{3}{
-      % Detailed technical skills
-      \whenrole{firmware}{
-        \keywordsentry{System \& Firmware Architecture}{
-          Architecture Design \metric{(70\% code reuse)} • Requirements Engineering • 
-          Technical Documentation • HAL Implementation • Proof-of-Concepts \metric{(4+ delivered)}
-        }
-        \keywordsentry{Communication Protocols}{
-          BLE Stack Integration • SPI/I2C/UART \techmetric{(2Mbps)} • Ethernet • WiFi • 
-          JTAG Debugging • Protocol Optimization \metric{(30\% latency reduction)}
-        }
-      }
-      
-      \whenrole{general}{
-        \keywordsentry{System Architecture}{
-          Requirements Engineering • V-Model \& Agile • Technical Documentation • 
-          Project Leadership \leadmetric{(5-person team)} • PoC Development
-        }
-        \keywordsentry{Development Tools}{
-          Git \techmetric{• Docker • CI/CD} • NumPy/Pandas • PyTorch/TensorFlow • 
-          JIRA • Performance Profiling
-        }
-      }
-      
-      \keywordsentry{Project Management}{
-        Agile/Scrum Implementation \metric{(45\% spillover reduction)} • 
-        Sprint Planning • Cross-functional Coordination \leadmetric{(2 time zones)} • 
-        \whenrole{consulting}{Technical Consulting • Independent Projects}
-        \whenrole{firmware}{Backlog Management • V-Model Methodologies}
-      }
-    }
+  \whenrole{consulting}{
+    \begin{center}
+    \textbf{Leadership \& Business Impact}\\
+    \vspace{1mm}
+    \checkmark\, Technical Team Leadership (12+ Stakeholders) • \checkmark\, Project ROI (3:1 Achieved) • \checkmark\, Cost Optimization (\$50K+ Saved)
+    \end{center}
   }
-\end{keywords}
+}
