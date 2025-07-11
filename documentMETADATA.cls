@@ -447,11 +447,11 @@
   }
 
   \newcommand*\threecolumnsection[3]{
-  \begin{minipage}[t]{\dimexpr(\linewidth/4) - 5em}
+  \begin{minipage}[t]{\dimexpr(\linewidth/4) - 3em}
     #1
   \end{minipage}
   \hfill
-  \begin{minipage}[t]{\dimexpr(\linewidth/2) - 7em}
+  \begin{minipage}[t]{\dimexpr(\linewidth/2) - 9em}
     #2
   \end{minipage}
   \hfill
