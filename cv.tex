@@ -1,58 +1,64 @@
 % !TEX TS-program = luatex
-% USA STEM CV LaTeX Template
-%
-% Author:
-% Sabrina Benge
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-
 \documentclass[localFont,alternative]{documentMETADATA}
+
+% Load version configuration
+\input{config/cv-versions}
+
+% Detect and set version
+\ifdefined\cvversion
+  \ifdefstring{\cvversion}{firmware}{\cvVersionFirmware}{}
+  \ifdefstring{\cvversion}{ai}{\cvVersionAI}{}
+  \ifdefstring{\cvversion}{consulting}{\cvVersionConsulting}{}
+  \ifdefstring{\cvversion}{executive}{\cvVersionExecutive}{}
+  \ifdefstring{\cvversion}{general}{\cvVersionGeneral}{}
+\else
+  % Default to general version if no version specified
+  \cvVersionGeneral
+\fi
+
+% Conditional name and tagline
 \name{Arthur}{PASSUELLO}
-%\tagline{Senior Embedded Systems Engineer | Software Architect | Technical Project Lead}
-%% Logitech
-\tagline{Senior Firmware Engineer | Software Architect | Technical Project Lead}
-%% Neuro Swiss AI
-%\tagline{Senior Embedded Systems Engineer | Applied AI/ML Practitioner | Technical Project Lead}
+
+\iftoggle{firmware}{
+  \tagline{Senior Firmware Engineer | Software Architect | Technical Project Lead}
+}{}
+\iftoggle{ai}{
+  \iftoggle{consulting}{
+    \tagline{Senior Embedded Systems Engineer | Applied AI/ML Practitioner | Technical Project Lead}
+  }{
+    \tagline{Embedded Systems Engineer | Applied AI/ML Practitioner | Technical Lead}
+  }
+}{}
+\iftoggle{consulting}{
+  \iftoggle{ai}{}{
+    \tagline{Technical Consultant | Systems Architect | Project Lead}
+  }
+}{}
+\iftoggle{executive}{
+  \tagline{Senior Technical Leader | Cross-functional Engineering Manager}
+}{}
+\iftoggle{general}{
+  \tagline{Embedded Systems Engineer | Applied AI/ML Practitioner | Technical Project Lead}
+}{}
 
 \socialinfo{
-	
-
-	\smartphone{+(41) 79 176 24 84}
-	\email{apassuello@protonmail.com}\\
-	\address{Chemin du Parc-de-Valency 1, 1004 Lausanne, Suisse}
-    \newline
-    \linkedin{arthur-passuello/}
-    \github{apassuello}
-	%\infos{}
+  \smartphone{+(41) 79 176 24 84}
+  \email{apassuello@protonmail.com}\\
+  \address{Chemin du Parc-de-Valency 1, 1004 Lausanne, Suisse}
+  \newline
+  \linkedin{arthur-passuello/}
+  \github{apassuello}
 }
 
 \begin{document}
-
-	\makecvheader
-
-	\makecvfooter
-		{\textsc{}} %\selectlanguage{english}\today
-		{}
-		{\thepage}
-
-	\input{section_headline_firmware}                % Research Statement
-    \input{section_experience_fw}	        	% Section Professional Experience
-%	\vspace*{10mm}
-    \input{section_skills_fw}				    % Section Skills
-    \input{section_education}			% Section Honors and Awards
-%    \vspace*{10mm}
-%	\newpage
-	%\input{section_interets}				% Section interests
-%	\newpage
-	\input{section_languages}	% Section languaqes
-    \input{section_projects_all}   
-% Section Projects
-	%\input{section_outreach_volunteering}   % Section Professional Outreach and volunteering
-	%\input{section_teaching_mentoring}      % Section Teaching and Mentoring
-	%\input{section_certifications}          % Section Certifications
-	%\input{section_references} 				% Section references
-	
-
-
+  \makecvheader
+  
+  \input{sections/section_headline}
+  \input{sections/section_experience}
+  \input{sections/section_education}
+  \input{sections/section_skills}
+  \input{sections/section_projects}
+  \input{sections/section_languages}
+  
+  \makecvfooter{}{}{\thepage}
 \end{document}
