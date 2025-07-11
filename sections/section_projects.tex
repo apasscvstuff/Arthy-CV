@@ -1,5 +1,6 @@
+\iftoggle{consulting}{
 \vspace*{-5mm}
-\sectionTitle{Projects}{\faLaptop}
+}\sectionTitle{Projects}{\faLaptop}
 \begin{projects}
 \whenrole{ai}{
 \project
@@ -28,27 +29,32 @@ Built comprehensive evaluation framework with 67 unit tests, integration testing
 {\website{Github}{https://github.com/apassuello/multimodal\_insight\_engine/}}
 {Designed and implemented a full-stack training and evaluation platform for Transformer-based multimodal models.
 Developed modules for mixed precision, quantization, and pruning; integrated benchmarking tools to compare performance across optimizations.
-Built tokenizers and dataloaders for multilingual datasets\whenrole{general}{ (WMT, Europarl, IWSLT)}; supported joint BPE and custom preprocessing.
-Integrated pretrained models \whenrole{general}{(CLIP, ViT) }with a unified interface for image-text tasks; implemented custom loss functions and schedulers.
+Built tokenizers and dataloaders for multilingual datasets\whenrole{ai}{ (WMT, Europarl, IWSLT)}; supported joint BPE and custom preprocessing.
+Integrated pretrained models\whenrole{ai}{ (CLIP, ViT)} with a unified interface for image-text tasks; implemented custom loss functions and schedulers.
 Conducted safety evaluations via red teaming frameworks, adversarial generation, and prompt injection testing.}
 {PyTorch, Transformers, NLP, Vision Models, Model Optimization, Tokenization, CLIP, ViT, Mixed Precision, Quantization, Pruning, Red Teaming, BLEU/F1/Accuracy, t-SNE, Config Management, Visualization, Logging, Safety Evaluation}
-\whennotrole{executive}{
-\whenrole{general}{
-\newpage
-}
+\whenrole{firmware}{\newpage}
+\whenrole{ai}{\newpage}
 \project
 {ASIC-Enabled Medical Device Development}{2021 - 2022}
 {\website{ADEPT Neuro SA}{https://adeptneuro.com}}
-{Development of hardware-software interfaces for novel deep-brain electrodes with integrated ASICs\whenrole{firmware}{, demonstrating embedded hardware design expertise and complex system integration}. Implementation of machine learning-based seizure detection system, achieving excellent academic recognition (5.0/6.0). Project focused on \whenrole{firmware}{deeply integrated, high-performance }medical device \whenrole{firmware}{platforms within startup environment}\whenrole{general}{innovation within a startup environment at EPFL Innovation Park}.}
+{\whenrole{firmware}{Development of hardware-software interfaces for novel deep-brain electrodes with integrated ASICs, demonstrating embedded hardware design expertise and complex system integration. Implementation of machine learning-based seizure detection system, achieving excellent academic recognition (5.0/6.0). Project focused on deeply integrated, high-performance medical device platforms within startup environment.}\whenrole{general}{Development of hardware-software interfaces for novel deep-brain electrodes with integrated ASICs. Implementation of machine learning-based seizure detection system, achieving excellent academic recognition (5.0/6.0). Project focused on medical device innovation within a startup environment at EPFL Innovation Park.}}
 {Hardware-Software Integration, ASIC Integration, Machine Learning, Medical Devices, C++, Python}
-}
+
 \whenrole{general}{
 \project
 {Data-Driven Analysis of DeepWeb Marketplace Dynamics}{2019}
 {\website{EPFL ADA Course}{https://github.com/ADA-2019/Project}}
 {Large-scale data analysis project processing over 1TB of historical marketplace data (2013-2015) to study behavioral economics and regulatory impact. Implemented comprehensive data processing pipeline and statistical analysis to evaluate short-term versus long-term marketplace dynamics. Project received distinguished academic recognition (5.5/6.0).}
 {Python, Data Analysis, Big Data Processing, Statistical Analysis, Web Scraping, Pandas}
+
+\project
+{PriorityQueue Formal Verification}{2019 - 2020}
+{\website{}{https://github.com/fquellec/PriorityQueue-FormalVerification}}
+{An attempt at proving the correctness of a Stainless implementation of theOptimal Purely Functional Priority Queues introduced by Chris Okasaki and Gerth Stølting Brodal (6.0/6.0)}
+{Scala, Stainless, Formal Verification}
 }
+
 \whenrole{firmware}{
 \project
 {Data-Driven Analysis of DeepWeb Marketplace Dynamics}{2019}
@@ -62,11 +68,5 @@ Conducted safety evaluations via red teaming frameworks, adversarial generation,
 {Implementation of FM-Index algorithm for genomic sequence matching on Artix-7 FPGA platform with HMC memory integration. Developed complete embedded hardware architecture and comprehensive testing infrastructure, achieving performance metrics surpassing traditional software solutions through optimized hardware-software integration. Project earned exceptional recognition (5.5/6.0).}
 {FPGA, Verilog, HMC Memory, Genomics, Hardware Architecture, System Testing}
 }
-\whenrole{general}{
-\project
-{PriorityQueue Formal Verification}{2019 - 2020}
-{\website{}{https://github.com/fquellec/PriorityQueue-FormalVerification}}
-{An attempt at proving the correctness of a Stainless implementation of theOptimal Purely Functional Priority Queues introduced by Chris Okasaki and Gerth Stølting Brodal (6.0/6.0)}
-{Scala, Stainless, Formal Verification}
-}
+
 \end{projects}
