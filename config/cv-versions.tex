@@ -1,0 +1,50 @@
+% CV Version Definitions
+% Each version sets specific toggles to create targeted output
+
+\newcommand{\cvVersionFirmware}{
+  \toggletrue{firmware}
+  \toggletrue{technical}
+  \toggletrue{detailed}
+  \togglefalse{ai}
+  \togglefalse{consulting}
+  \togglefalse{executive}
+  \togglefalse{quantified}
+}
+
+\newcommand{\cvVersionAI}{
+  \toggletrue{ai}
+  \toggletrue{technical}
+  \togglefalse{firmware}
+  \togglefalse{consulting}
+  \togglefalse{executive}
+  \toggletrue{detailed}
+}
+
+\newcommand{\cvVersionConsulting}{
+  \toggletrue{consulting}
+  \toggletrue{ai}
+  \toggletrue{businessfocus}
+  \togglefalse{firmware}
+  \togglefalse{executive}
+  \toggletrue{quantified}
+}
+
+\newcommand{\cvVersionExecutive}{
+  \toggletrue{executive}
+  \toggletrue{quantified}
+  \togglefalse{technical}
+  \togglefalse{detailed}
+  \togglefalse{firmware}
+  \togglefalse{ai}
+  \togglefalse{consulting}
+  \toggletrue{onepage}
+}
+
+\newcommand{\cvVersionGeneral}{
+  \toggletrue{firmware}
+  \toggletrue{ai}
+  \togglefalse{detailed}
+  \togglefalse{executive}
+  \togglefalse{consulting}
+  \toggletrue{general}
+}

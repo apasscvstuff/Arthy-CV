@@ -1,227 +1,213 @@
-Table of Contents
-1. About
-2. Acknowledgements
-2. Getting Started with this Template
-3. Tips to writing a good CV
-ABOUT---------------------------------------------------
+# Arthur Passuello's Tag-Based CV System
 
-ACKNOWLEDGMENTS-----------------------------------------
-USA STEM CV Template
-This template has been adapted from a template created by Christophe Roger (Darwiin). The further edits were made to make a more academic CV by USA standards include letter size and various sections. 
+This LaTeX CV system uses conditional compilation to generate multiple CV versions from a single source, optimized for different roles and audiences.
 
-Tips on what to include at the bottom of this document.
+## Overview
 
+The system generates 5 distinct CV versions:
+- **Firmware**: Senior Firmware Engineer focused on embedded systems
+- **AI**: Applied AI/ML practitioner with embedded systems experience  
+- **Consulting**: Technical consultant with AI/business focus
+- **Executive**: One-page executive summary for senior roles
+- **General**: Balanced version covering firmware and AI expertise
 
-Awesome Source CV [![Example](https://img.shields.io/badge/Exemple-pdf-blue.svg)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume.pdf)
-=================
+## How to Use in Overleaf
 
-## About
+### Generating Different CV Versions
 
-**Awesome Source Latex CV** is based on a CV template created by Alessandro Plasmati. The original template use _XeLaTeX_ engine and _[Fontin Sans](http://www.exljbris.com/fontinsans.html)_ font. 
+To generate a specific CV version in Overleaf:
 
-More informations about the original Alessandro Plasmati template can be found here :
-
-   -  [ Scribd ](http://fr.scribd.com/doc/16335667/Writing-your-Professional-CV-with-LaTeX)
-   -  [ LaTeX Templates ](http://www.latextemplates.com/template/plasmati-graduate-cv)
-   -  [ ShareLatex ](https://www.sharelatex.com/templates/cv-or-resume/professional-cv)
-
-**Personal data** has moved on top of the first page just before the position and _[Fontin Sans](http://www.exljbris.com/fontinsans.html)_ font has been replaced by _[Source Sans Pro Font](https://github.com/adobe-fonts/source-sans-pro)_ from Adobe. _[Font Awesome](http://fontawesome.io/)_ icons are used to highlight important elements.
-
-Unlike _Alessandro Plasmati_ CV template, all layout stuff in **Awesome Source Latex CV** has moved in the Latex class file _awesome-source-cv.cls_.
-
-GETTING STARTED WITH THIS TEMPLATE ---------------------
-
-You can edit online **Awesome Source Latex CV** on [Overleaf](https://www.overleaf.com/latex/templates/awesome-source-cv/wrdjtkkytqcw). Feel free to use my [referal link](https://www.overleaf.com/signup?ref=54c221604cd6) if you want to create your account.
-
-## How to use **Awesome Source CV** latex class
-
-### Construct the header
-
-Outside of the `\socialinfo` wrapper you have to define the mandatory parameters `\name` and `\tagline`.
+1. Open `cv.tex` in the editor
+2. Add one of the following lines at the very top of the file (before `\documentclass`):
 
 ```latex
-% Define author's name
-% Usage: \name{<firstname>}{<lastname>}
-% Mandatory
-\name{Christophe}{ROGER}
+% For Firmware version:
+\def\cvversion{firmware}
 
-% Define author's photo (optional)
-% Usage \photo{<diameter>}{<photo>}
-\photo{2.5cm}{darwiin}
+% For AI version:
+\def\cvversion{ai}
 
-% Define author's tagline
-% Usage: \tagline{<tag line>} 
-% Mandatory
-\tagline{Chef de projet IT}
+% For Consulting version:
+\def\cvversion{consulting}
+
+% For Executive version:
+\def\cvversion{executive}
+
+% For General version:
+\def\cvversion{general}
 ```
 
-Most social network have their command to render a clickable link or a simple text entry.
+3. Recompile the document in Overleaf
+4. The PDF will be generated with content specific to that version
 
+### Example
+
+To generate the firmware-focused CV:
 ```latex
-% Render author's linked-in (optional)
-% Usage: \linkedin{<linked-in-nick>}
-\linkedin{christopheroger}
-
-% Render author's viadeo(optional)
-% Usage: \viadeo{<viadeo-nick>}
-\viadeo{christopheroger}
-
-% Render author's github (optional)
-% Usage: \github{<github-nick>}
-\github{darwiin}
-
-% Render author's email (optional)
-% Usage: \email{<email adress>}
-\email{christophe.roger@mail.com}
+\def\cvversion{firmware}
+% !TEX TS-program = luatex
+\documentclass[localFont,alternative]{documentMETADATA}
+...
 ```
 
-Put these command in the `\socialinfo` wrapper. Feel free to add `\\` when you want to force a new line.
+## Toggle System
+
+The system uses LaTeX etoolbox toggles to control content visibility:
+
+### Role Toggles
+- `firmware`: Firmware/embedded systems content
+- `ai`: AI/ML content
+- `consulting`: Business consulting content
+- `executive`: Executive-level content
+- `general`: General balanced content
+
+### Feature Toggles
+- `technical`: Technical details included
+- `detailed`: Extended descriptions
+- `quantified`: Metrics and numbers emphasized
+- `businessfocus`: Business impact highlighted
+- `onepage`: Constrain to single page
+- `fullversion`: Full multi-page version
+
+## File Structure
+
+```
+.
+├── config/
+│   └── cv-versions.tex      # Version definitions and toggle settings
+├── sections/                 # Consolidated section files
+│   ├── section_headline.tex
+│   ├── section_experience.tex
+│   ├── section_skills.tex
+│   ├── section_education.tex
+│   ├── section_projects.tex
+│   └── section_languages.tex
+├── archive/                  # Original section file backups
+├── fonts/                    # Source Sans Pro font files
+├── cv.tex                    # Main LaTeX file
+├── documentMETADATA.cls      # Custom document class
+└── README.md                 # This file
+```
+
+## Conditional Content Examples
+
+### In Section Files
+
+Use these commands to include content conditionally:
 
 ```latex
-\socialinfo{
-  \linkedin{christopheroger}
-  \viadeo{christopheroger}
-  \github{darwiin}\\
-  \smartphone{+687 123 456}
-  \email{christophe.roger@mail.com}\\
-  \address{2 Rue du quartier, 98765 Ville, Pays}\\
-  \infos{Né le 23 septembre 1982 (34 ans) à Nouméa, Nouvelle-Calédonie}
+% Include only for firmware role:
+\whenrole{firmware}{
+  \item Developed real-time embedded firmware...
+}
+
+% Include for AI OR consulting:
+\iftoggle{ai}{
+  \iftoggle{consulting}{
+    % AI + Consulting specific content
+  }{
+    % AI only content
+  }
+}{}
+
+% Exclude from executive version:
+\whennotrole{executive}{
+  \item Detailed technical implementation...
 }
 ```
 
-Use the `\makecvheader`command to generate the header.
+### Tagline Example
+
+The tagline changes based on version:
+- Firmware: "Senior Firmware Engineer | Software Architect | Technical Project Lead"
+- AI: "Embedded Systems Engineer | Applied AI/ML Practitioner | Technical Lead"
+- Consulting: "Senior Embedded Systems Engineer | Applied AI/ML Practitioner | Technical Project Lead"
+- Executive: "Senior Technical Leader | Cross-functional Engineering Manager"
+- General: "Embedded Systems Engineer | Applied AI/ML Practitioner | Technical Project Lead"
+
+## Customization
+
+### Adding New Content
+
+When adding new content, consider which versions should include it:
 
 ```latex
-\makecvheader
+% In experience section:
+\whenrole{firmware}{
+  \item New firmware-specific achievement
+}
+
+% In skills section:
+\whenrole{ai}{
+  \keywordsentry{New AI Skill}{TensorFlow, PyTorch}
+}
 ```
 
-### Construct the _experiences_ section
+### Creating a New Version
 
-To describe your experiences you have first to declare the `experiences` environment
-
+1. Add version definition to `config/cv-versions.tex`:
 ```latex
-% Begin a new experiences environment to use experience and consultantexperience macro
-\begin{experiences}
-
-% Here's go your experiences
-
-\end{experiences}
+\newcommand{\cvVersionCustom}{
+  \toggletrue{custom}
+  \toggletrue{technical}
+  % Set other toggles as needed
+}
 ```
 
-Then you can describe your experiences using **\experience** and **\consultantexperience** entries. Each
-entry must be separated by the **\emptyseparator** 
-
+2. Add version detection in `cv.tex`:
 ```latex
-% Begin a new experiences environment to use experience and consultantexperience macro
-\begin{experiences}
-
-% The experience entry work as below and can be used to describe a job experience
-  \experience
-    {End date}      {Experience title}{Enterprise}{Country}
-    {Begin date}    {
-    				  experience details
-                      \begin{itemize}
-                        \item Item 1: _Item 1 description_
-                        \item Item 2: _Item 2 description_
-                        \item Item 3: _Item 3 description_
-                      \end{itemize}
-                    }
-                    {Technology highlights}
-
-% The emptyseparator macro is used to create white space in your experience
-  \emptySeparator
-
-% The consultantexperience macro is very similar to the experience macro, but offer you 
-% the possibility tu put client details
-  \consultantexperience
-    {End date}        {Experience title}{Enterprise}{Country}
-    {Begin date}      {Client job title}{Clent enterprise}
-                    {
-                      experience details
-                      \begin{itemize}
-                        \item Item 1: _Item 1 description_
-                        \item Item 2: _Item 2 description_
-                        \item Item 3: _Item 3 description_
-                      \end{itemize}
-                    }
-                    {Technology highlights}
-\end{experiences}
+\ifdefstring{\cvversion}{custom}{\cvVersionCustom}{}
 ```
 
-## License
+3. Add conditional content using the new toggle:
+```latex
+\whenrole{custom}{
+  % Custom version content
+}
+```
 
-Latex class file _awesome-source-cv.cls_ is published under the term of the [LPPL Version 1.3c](https://www.latex-project.org/lppl.txt).
+## Best Practices
 
-All content files are published under the term of the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
+1. **Test each version** after making changes
+2. **Use meaningful toggle names** for clarity
+3. **Group related content** within conditionals
+4. **Comment complex logic** for maintainability
+5. **Preserve all content** - use toggles rather than deleting
 
+## Troubleshooting
 
+### Common Issues
 
-TIPS to making a good CV /  Sections to include---------
+**Content appears in wrong version:**
+- Check toggle settings in `config/cv-versions.tex`
+- Verify conditional logic in section files
 
-Do's
-Research and Teaching Interests
-Education
-Professional / Academic positions can separate
-Publications / Posters / Presentations
-Awards
-Contact Info
-Include current project and publications in progress
-Teaching experience / tutoring / mentoring
-Grants / Contributions to research grant writing
-Professional initiative / outreach / professional service (creating events not being in a group)
-Possible include references
-Can include coursework but drop after time
+**Compilation errors:**
+- Ensure all `\iftoggle` blocks are properly closed with `{}`
+- Check for unmatched braces in conditional content
 
-Dont Include
-DOB / marital status
-misleading info
-holes in time
-headshot
-do not overinflate
+**Missing content:**
+- Review toggle combinations - some content may require multiple toggles
+- Check that content wasn't accidentally placed inside wrong conditional
 
+## Version Comparison
 
-SECTIONS
-CONTACT INFORMATION: phome, email, webpage url, address
-EDUCATION: Degrees and certs since end of high school 
-CERTIFICATIONS: Courseera / EdX / Rackham etc
-AWARDS: Fellowships, grants, awards in general etc
-PROFESSIONAL and ACADEMIC EXPERIENCE: grad researcher, internship, industry jobs
-RESEARCH STATEMENT: research interests / experience < 6 lines
-PUBLICATIONS:
-- divide in journal vs conference
-- peer reviewed or not
-- do not mislead: show the complete authors' list
-- you can clarify the practice in your discipline
-- "Accepted for publication" manuscripts go here
-Could report: 
-   - Acceptance rates, and impact factors
-   - Audience sizes
-WORKS IN PROGRESS
-- Papers /scholarly work you are working on, but has not been accepted yet
-PRESENTATIONS AND POSTERS
-PATENTS / PATENTS APPLICATIONS
-GRANTS?
-MENTORING
-- Undergraduates / junior students
-TEACHING EXPERIENCE
-- Graduate instructor, grading
-- Teaching evaluations?
-- can include tutoring
-- pedagogy statement? (<6 lines)
-- guest lecturing
-PROFESSIONAL SERVICE
-- Reviewed Papers
-- contributed to research grant proposals
-- officer ina student group in your discipline or beyond
-- could split within/outside university
-OUTREACH
-- Activities to engage people in your discipline who are not usually exposed to it
-PRESS?
-PROFESSTIONAL SOCIETIES
-MENTORING
-COMMUNITY SERVICE
+| Feature | Firmware | AI | Consulting | Executive | General |
+|---------|----------|-----|------------|-----------|---------|
+| Technical details | ✓ | ✓ | ✗ | ✗ | ✗ |
+| AI/ML content | ✗ | ✓ | ✓ | ✗ | ✓ |
+| Business focus | ✗ | ✗ | ✓ | ✓ | ✗ |
+| Quantified results | ✗ | ✗ | ✓ | ✓ | ✗ |
+| Page limit | 2+ | 2+ | 2+ | 1 | 2 |
 
-LAYOUT
-< 3 colors
-Easy to find headers
-full width for content if possible
+## Maintenance
+
+When updating the CV:
+1. Make changes in the appropriate section file
+2. Use conditionals to control visibility
+3. Test all 5 versions to ensure changes appear correctly
+4. Commit changes with descriptive messages
+
+## Acknowledgments
+
+This CV system is built on the "Awesome Source CV" template by Christophe Roger (Darwiin), adapted from Alessandro Plasmati's template. The tag-based conditional compilation system was developed to enable efficient maintenance of multiple CV versions from a single source.
