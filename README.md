@@ -200,11 +200,29 @@ When adding new content, consider which versions should include it:
 | Quantified results | ✗ | ✗ | ✓ | ✓ | ✗ |
 | Page limit | 2+ | 2+ | 2+ | 1 | 2 |
 
+## Testing Your Setup
+
+To verify the tag-based system is working correctly:
+
+1. **Test Default Version**: Compile `cv.tex` without any version definition - it should generate the general version
+2. **Test Each Version**: Add `\def\cvversion{version_name}` at the top of `cv.tex` and test each version:
+   - `\def\cvversion{firmware}` - Technical firmware engineer focus
+   - `\def\cvversion{ai}` - AI/ML practitioner focus
+   - `\def\cvversion{consulting}` - Technical consultant focus
+   - `\def\cvversion{executive}` - Executive summary (one page)
+   - `\def\cvversion{general}` - Balanced general version
+
+3. **Verify Content**: Check that each version shows appropriate:
+   - Tagline matches the version
+   - Experience bullets are version-specific
+   - Skills sections show relevant expertise
+   - Projects appear based on version logic
+
 ## Maintenance
 
 When updating the CV:
-1. Make changes in the appropriate section file
-2. Use conditionals to control visibility
+1. Make changes in the appropriate section file in `sections/`
+2. Use conditionals (`\whenrole{version}{}`, `\iftoggle{toggle}{}`) to control visibility
 3. Test all 5 versions to ensure changes appear correctly
 4. Commit changes with descriptive messages
 
