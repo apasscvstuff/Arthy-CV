@@ -11,7 +11,7 @@ Implemented hybrid retrieval system fusing dense (FAISS) and sparse (BM25) searc
 Developed multi-model answer generation supporting Ollama (Llama 3.2), HuggingFace API, and InferenceProviders with adaptive prompt engineering.
 Optimized embedding pipeline for Apple Silicon MPS acceleration, achieving 129.6 texts/second throughput—6x faster than baseline CPU implementation.
 Built comprehensive evaluation framework with 67 unit tests, integration testing, and manual quality assessment revealing critical improvements over naive approaches.}
-{PyTorch, FAISS, BM25, Llama 3.2, Streamlit, Docker, RAG, NLP, Hybrid Search, PDF Processing, Sentence Transformers, HuggingFace Deployment, MPS Acceleration, Prompt Engineering, RRF Fusion, RISC-V, Technical Documentation, Production Deployment, pytest}
+{PyTorch, FAISS, BM25, Llama 3.2, OpenAI API, Streamlit, Docker, RAG, NLP, Hybrid Search, PDF Processing, Sentence Transformers, HuggingFace Deployment, MPS Acceleration, Prompt Engineering, RRF Fusion, Technical Documentation, Production Deployment, pytest}
 }
 \whenrole{consulting}{
 \project
@@ -22,7 +22,7 @@ Implemented hybrid retrieval system fusing dense (FAISS) and sparse (BM25) searc
 Developed multi-model answer generation supporting Ollama (Llama 3.2), HuggingFace API, and InferenceProviders with adaptive prompt engineering.
 Optimized embedding pipeline for Apple Silicon MPS acceleration, achieving 129.6 texts/second throughput—6x faster than baseline CPU implementation.
 Built comprehensive evaluation framework with 67 unit tests, integration testing, and manual quality assessment revealing critical improvements over naive approaches.}
-{PyTorch, FAISS, BM25, Llama 3.2, Streamlit, Docker, RAG, NLP, Hybrid Search, PDF Processing, Sentence Transformers, HuggingFace Deployment, MPS Acceleration, Prompt Engineering, RRF Fusion, RISC-V, Technical Documentation, Production Deployment, pytest}
+{PyTorch, FAISS, BM25, Llama 3.2, OpenAI API, Streamlit, Docker, RAG, NLP, Hybrid Search, PDF Processing, Sentence Transformers, HuggingFace Deployment, MPS Acceleration, Prompt Engineering, RRF Fusion, Technical Documentation, Production Deployment, pytest}
 }
 \project
 {MultiModal Insight Engine\whenrole{firmware}{ (WIP)}}{Feb 2025 - Present}
@@ -32,16 +32,19 @@ Developed modules for mixed precision, quantization, and pruning; integrated ben
 Built tokenizers and dataloaders for multilingual datasets\whenrole{ai}{ (WMT, Europarl, IWSLT)}; supported joint BPE and custom preprocessing.
 Integrated pretrained models\whenrole{ai}{ (CLIP, ViT)} with a unified interface for image-text tasks; implemented custom loss functions and schedulers.
 Conducted safety evaluations via red teaming frameworks, adversarial generation, and prompt injection testing.}
-{PyTorch, Transformers, NLP, Vision Models, Model Optimization, Tokenization, CLIP, ViT, Mixed Precision, Quantization, Pruning, Red Teaming, BLEU/F1/Accuracy, t-SNE, Config Management, Visualization, Logging, Safety Evaluation}
+{PyTorch, Transformers, NLP, Computer Vision, Model Optimization, Tokenization, CLIP, ViT, Mixed Precision, Quantization, Pruning, Red Teaming, BLEU/F1/Accuracy, t-SNE, Config Management, Visualization, Logging, Safety Evaluation, HuggingFace}
 \whenrole{firmware}{\newpage}
 \whenrole{ai}{\newpage}
+\whennotrole{executive}{
 \project
 {ASIC-Enabled Medical Device Development}{2021 - 2022}
 {\website{ADEPT Neuro SA}{https://adeptneuro.com}}
 {\whenrole{firmware}{Development of hardware-software interfaces for novel deep-brain electrodes with integrated ASICs, demonstrating embedded hardware design expertise and complex system integration. Implementation of machine learning-based seizure detection system, achieving excellent academic recognition (5.0/6.0). Project focused on deeply integrated, high-performance medical device platforms within startup environment.}\whenrole{general}{Development of hardware-software interfaces for novel deep-brain electrodes with integrated ASICs. Implementation of machine learning-based seizure detection system, achieving excellent academic recognition (5.0/6.0). Project focused on medical device innovation within a startup environment at EPFL Innovation Park.}}
 {Hardware-Software Integration, ASIC Integration, Machine Learning, Medical Devices, C++, Python}
+}
 
 \whenrole{general}{
+\whennotrole{executive}{
 \project
 {Data-Driven Analysis of DeepWeb Marketplace Dynamics}{2019}
 {\website{EPFL ADA Course}{https://github.com/ADA-2019/Project}}
@@ -54,8 +57,10 @@ Conducted safety evaluations via red teaming frameworks, adversarial generation,
 {An attempt at proving the correctness of a Stainless implementation of theOptimal Purely Functional Priority Queues introduced by Chris Okasaki and Gerth Stølting Brodal (6.0/6.0)}
 {Scala, Stainless, Formal Verification}
 }
+}
 
 \whenrole{firmware}{
+\whennotrole{executive}{
 \project
 {Data-Driven Analysis of DeepWeb Marketplace Dynamics}{2019}
 {\website{EPFL ADA Course}{https://github.com/ADA-2019/Project}}
@@ -67,6 +72,7 @@ Conducted safety evaluations via red teaming frameworks, adversarial generation,
 {\github{HEIG-VD-Genomics/FM-Index-FPGA}}
 {Implementation of FM-Index algorithm for genomic sequence matching on Artix-7 FPGA platform with HMC memory integration. Developed complete embedded hardware architecture and comprehensive testing infrastructure, achieving performance metrics surpassing traditional software solutions through optimized hardware-software integration. Project earned exceptional recognition (5.5/6.0).}
 {FPGA, Verilog, HMC Memory, Genomics, Hardware Architecture, System Testing}
+}
 }
 
 \end{projects}

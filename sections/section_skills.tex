@@ -3,51 +3,80 @@
 \begin{keywords}
   % Executive version - streamlined for impact
   \whenrole{executive}{
-    \keywordsentry{Leadership}{5+ Direct Reports \metric{• 12+ Stakeholders} • Cross-functional Coordination \businessimpact{• \$2M+ Impact}}
-    \keywordsentry{Technical Domains}{Medical Devices \techmetric{(ISO-13485)} • Embedded Systems \techmetric{(FreeRTOS)} • AI/ML \metric{(87\% accuracy)}}
-    \keywordsentry{Delivery Excellence}{Agile/Scrum \leadmetric{• 100\% On-Time} • Regulatory Compliance \businessimpact{• Quality Systems}}
+    \keywordsentry{Leadership \& Impact}{Technical Team Leadership \leadmetric{(7+ Direct Reports)} • Cross-functional Coordination \metric{(12+ Stakeholders)} • Strategic Technical Decisions \businessimpact{(\$2M+ Clinical Trial Impact)}}
+    \keywordsentry{Technical Domains}{Medical Device Innovation \techmetric{(ISO-13485/IEC-62304)} • Embedded Systems Architecture • AI/ML Implementation \metric{(Production Ready)}}
+    \keywordsentry{Delivery \& Excellence}{Agile/Scrum Implementation \leadmetric{(100\% On-Time Delivery)} • Regulatory Compliance • Quality Systems \businessimpact{• Risk Management}}
   }
   
   % Technical versions - detailed expertise
   \whennotrole{executive}{
     \priority{1}{
-      % Core technical skills always shown
+      % Core programming languages - always shown
       \keywordsentry{Programming Languages}{
-        \techmetric{C/C++ (Expert) • Python (Expert) • }
+        \techmetric{Python (Expert) • C/C++ (Expert) • }
         \whenrole{firmware}{VHDL • Assembly • Shell Scripting}
-        \whenrole{ai}{SQL • R • JavaScript}
+        \whenrole{ai}{JavaScript • SQL • R}
+        \whenrole{consulting}{JavaScript • SQL}
         \whenrole{general}{VHDL • JavaScript • Scala}
       }
       
-      \keywordsentry{Medical Device Development}{
-        Regulatory Standards \techmetric{(ISO-13485, IEC-62304\whenrole{consulting}{, IEC-60601})} • 
-        Quality Systems \metric{• 100\% Compliance Rate} • 
-        Risk Management \businessimpact{• Safety-Critical Design} • 
-        Design Controls\whenrole{general}{ \& V\&V}
+      % AI/ML prominence for AI and consulting roles
+      \whenrole{ai}{
+        \keywordsentry{AI \& LLMs}{
+          OpenAI/Anthropic Integration • RAG Systems \techmetric{(99.5\% chunk quality)} • 
+          Vector Databases \metric{(FAISS)} • Prompt Engineering • 
+          HuggingFace Deployment \techmetric{(6x speedup)}
+        }
+        \keywordsentry{ML \& Data Science}{
+          PyTorch/TensorFlow \metric{(Expert)} • Model Optimization \techmetric{(Quantization, Pruning)} • 
+          Computer Vision \metric{(CLIP, ViT)} • NLP \techmetric{(Transformers)} • 
+          scikit-learn • Pandas/NumPy
+        }
+      }
+      
+      \whenrole{consulting}{
+        \keywordsentry{AI \& Technical Consulting}{
+          OpenAI/Anthropic APIs • RAG Implementation • Strategic AI Consulting • 
+          Technical Training \leadmetric{(100+ executives)} • Cross-cultural Communication
+        }
+      }
+      
+      % Medical device expertise for technical roles
+      \whennotrole{consulting}{
+        \keywordsentry{Medical Device Development}{
+          Regulatory Standards \techmetric{(ISO-13485, IEC-62304)} • 
+          Quality Systems \metric{• 100\% Compliance Rate} • 
+          Risk Management \businessimpact{• Safety-Critical Design} • 
+          Design Controls\whenrole{general}{ \& V\&V}
+        }
       }
     }
     
     \priority{2}{
-      % Role-specific technical expertise
+      % Software engineering and development tools
       \whenrole{ai}{
-        \keywordsentry{AI/ML \& Data Science}{
-          Machine Learning \metric{(87\% accuracy)} • Transformer Models • Computer Vision • 
-          PyTorch \techmetric{• TensorFlow • Keras} • Model Optimization \metric{(6x speedup)}
+        \keywordsentry{Software Engineering}{
+          FastAPI • Streamlit • Docker \techmetric{(Production Ready)} • 
+          Git/CI-CD • pytest \metric{(67 unit tests)} • 
+          MPS Acceleration \techmetric{(Apple Silicon)} • Linux/macOS
         }
-        \keywordsentry{Technical Education}{
-          Training Design \leadmetric{• 100+ Students • 4.8/5.0 Rating} • 
-          Cross-cultural Communication • Educational Content Creation
+        \keywordsentry{Technical Education \& Communication}{
+          Training Design \leadmetric{(100+ Students • 4.8/5.0 Rating)} • 
+          Cross-cultural Communication • Educational Content Creation • 
+          Technical Documentation \metric{(Research Grade)}
         }
       }
       
       \whenrole{consulting}{
         \keywordsentry{Technical Leadership \& Communication}{
-          Stakeholder Management \leadmetric{(12+ stakeholders)} • Technical Training \metric{(100+ executives)} • 
-          Strategic Consulting \businessimpact{(\$500K+ decisions)} • Cross-cultural Communication
+          Stakeholder Management \leadmetric{(12+ stakeholders)} • Strategic Consulting \businessimpact{(\$500K+ decisions)} • 
+          Cross-cultural Communication • Client Relations \leadmetric{(100\% retention)} • 
+          Technical Training \metric{(100+ executives)}
         }
-        \keywordsentry{Business Impact}{
+        \keywordsentry{Business Impact \& Project Management}{
           Project ROI \businessimpact{(3:1 achieved)} • Cost Optimization \metric{(\$50K+ saved)} • 
-          Process Improvement \businessimpact{(45\% efficiency gain)} • Client Relations \leadmetric{(100\% retention)}
+          Process Improvement \businessimpact{(45\% efficiency gain)} • 
+          Agile/Scrum Implementation \metric{(45\% spillover reduction)}
         }
       }
       
