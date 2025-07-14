@@ -4,26 +4,97 @@
     {\iftoggle{general}{Today}{June 2025}}   {Embedded Software Engineer}{Tandem Diabetes Care Switzerland}{(Ref. Patrick Segura)}
     {December 2022} {
                       \begin{itemize}
-                       \item Led firmware development for Sigi™ insulin pump achieving delivery of the first Firmware release with First-In-Human trial compliance\whenrole{consulting}{, demonstrating ability to deliver ethical technology solutions under regulatory constraints}
-                       \whenrole{firmware}{\item Coordinated cross-functional teams across multiple time zones, including collaboration with San Diego engineering team for HIL system adoption, while mentoring team members on embedded development and system design}
-                       \whenrole{consulting}{\item Translated clinical trial roadmap requirements into concrete technical strategies, managing multiple parallel projects under tight regulatory deadlines while ensuring ethical technology development}
-                       \whenrole{firmware}{\item Developed proprietary embedded software combining third-party Bluetooth stack with custom safety algorithms and real-time insulin delivery protocols}
-                       \whenrole{firmware}{\item Mentored team members on embedded development, system design,  and system requirements and advised R\&D management on critical embedded hardware and software technology choices for next-generation pump platform evolution}
-                       \whenrole{consulting}{\item Advised R\&D management on critical technology choices for next-generation platform evolution, providing strategic technical consultation for product roadmap decisions}
-                        \item Architected and delivered proof-of-concept systems\whenrole{general}{ from user needs analysis to successful company-wide documented demos}\whenrole{firmware}{ from user needs analysis to successful company-wide documented demos}
+                      \item Led firmware development for Sigi™ insulin pump achieving delivery of the first Firmware release with First-In-Human trial compliance\whenrole{consulting}{, demonstrating ability to deliver ethical technology solutions under regulatory constraints}
+                      \whenrole{firmware}{
+                        \item Coordinated cross-functional teams across multiple time zones, including collaboration with San Diego engineering team for HIL system adoption, while mentoring 3-5 team members on embedded development and system design
+                        \item Developed proprietary embedded software combining third-party Bluetooth stack with custom safety algorithms and real-time insulin delivery protocols
+                        \item Implemented sensor fusion system combining accelerometer and Hall effect sensors achieving 100\% detection accuracy through statistical calibration algorithms and dynamic threshold adjustment
+                        \item Optimized embedded system performance doubling battery longevity and reducing data transmission by 80\% through algorithmic optimization and power management
+                        \item Advised R\&D management on critical embedded hardware and software technology choices for next-generation pump platform evolution
+                        \item Established comprehensive test infrastructure for medical-grade firmware verification achieving 90\%+ test coverage through HIL system development, with automated CI/CD pipeline on GitHub for branch testing and Grafana dashboards for real-time data visualization
+                        \item Facilitated Agile ceremonies (PI Planning, stand-ups, sprint planning, retrospectives, demos) and implemented Scrum framework (SaFE) for medical device development, managing product backlogs
+                        }
+                       \whenrole{ai}{
+                        \item Designed RAG system architecture using hybrid retrieval (semantic + keyword search) with local Ollama deployment for technical documentation chatbot serving 100+ MB corpus of IEC-62304 compliance materials
+                        \item Implemented Hall effect signal modeling and data analysis pipelines using Python for simulation experiments and sensor validation in medical device applications
+                        \item Developed statistical calibration algorithms for sensor fusion system achieving 100\% detection accuracy through dynamic threshold adjustment and boot-time calibration
+                        \item Created comprehensive Python training curriculum enabling team transition from LabView to Python-based development workflows, training 15+ engineers
+                        \item Architected and delivered 6 proof-of-concept systems including innovative sensor solutions, achieving stakeholder adoption for production implementation
+                        \item Established test infrastructure achieving 90\%+ coverage through automated validation frameworks with CI/CD pipeline integration and Grafana dashboards for data-driven verification and real-time monitoring
+                        }
+                        \whenrole{consulting}{
+                        \item Translated clinical trial roadmap requirements into concrete technical strategies, managing multiple parallel projects under tight regulatory deadlines while ensuring ethical technology development
+                        \item Advised R\&D management on critical technology choices for next-generation platform evolution, providing strategic technical consultation for product roadmap decisions
+                        \item Designed and demonstrated 6 proof-of-concept systems to stakeholders, achieving production adoption and excellent feedback through systematic innovation approach
+                        \item Led technical knowledge transfer initiatives training 15+ team members, successfully transitioning development workflows and improving team capabilities
+                        \item Implemented comprehensive validation infrastructure delivering 90\%+ test coverage through automated CI/CD workflows and real-time monitoring dashboards, ensuring regulatory compliance and quality assurance
+                        \item Coordinated cross-functional teams across multiple time zones while mentoring 3-5 engineers, improving inter-team coordination and technical expertise
+                        }
+                        \whenrole{general}{
+                        \item Architected and delivered proof-of-concept systems from user needs analysis to successful company-wide documented demos
+                        \item Established test infrastructure for medical-grade firmware verification — e.g. led the development of a HIL system achieving 90\%+ test coverage
+                        \item Mentored 3-5 team members on embedded development, system design, and system requirements while creating Python training materials
+                        \item Managed technical subprojects ensuring ISO 13485/IEC 62304 compliance (DHF, risk analysis, etc.)
+                        \item Established test infrastructure for medical-grade firmware verification — e.g. led the development of a HIL system achieving 90\%+ test coverage with automated CI/CD and real-time Grafana monitoring
+                        }
+                        \whennotrole{ai}{
                         \item Presented\whenrole{firmware}{ PoCs and firmware system updates}\whenrole{consulting}{ technical concepts and system updates} to clinical and business stakeholders\whenrole{consulting}{, consistently adapting complex technical language to varied audiences across organizational levels}\whenrole{firmware}{, adapting technical language to varied audiences across organizational levels}
-                        \whenrole{firmware}{\item Established test infrastructure for medical-grade firmware verification — e.g. led the development of a HIL system}
-                        \whenrole{general}{\item Established test infrastructure for medical-grade firmware verification — e.g. led the development of a HIL system}
+                        }
                         \item Managed technical subprojects ensuring ISO 13485/IEC 62304 compliance (DHF, risk analysis, etc.)\whenrole{consulting}{, demonstrating expertise in quality frameworks applicable to AI governance}
-                        \whenrole{firmware}{\item Facilitated Agile ceremonies (PI Planning, stand-ups, sprint planning, retrospectives, demos) and implemented Scrum framework (SaFE) for MDD, managing product backlogs.}
-                        \whenrole{consulting}{\item Facilitated Agile ceremonies and implemented Scrum framework for medical device development, managing product backlogs and coordinating interdisciplinary teams}
                       \end{itemize}
                     }
-                {\whenrole{firmware}{Software Architecture, System Engineering, C/C++, Python, FreeRTOS, Safety-Critical Systems, Technical Leadership, Cross-functional, Team Coordination, CI/CD Implementation, Git Version Control, Stakeholder Communication, JTAG, STM32, Nordiq, Jira, SDLC, Agile/Scrum}%
-                 \whenrole{consulting}{Technical Strategy, Cross-functional Coordination, Regulatory Compliance, Stakeholder Communication, Strategic Consulting, Ethical Technology Development, Team Leadership}%
-                 \whenrole{general}{System Architecture, FreeRTOS, Safety-Critical Systems, Technical Leadership, Risk Management, Requirement Engineering, Client-facing Communication Skills}%
-                 \whenrole{ai}{System Architecture, FreeRTOS, Safety-Critical Systems, Technical Leadership, Risk Management, Requirement Engineering, Client-facing Communication Skills}}
+                 {\whenrole{firmware}{Software Architecture, System Engineering, C/C++, Python, FreeRTOS, Safety-Critical Systems, Sensor Fusion, Statistical Algorithms, Technical Leadership, Cross-functional Team Coordination, CI/CD Implementation, GitHub Actions, Grafana, Real-time Monitoring, Git Version Control, Stakeholder Communication, JTAG, STM32, Nordic, HIL Testing, Power Optimization, Agile/Scrum}%
+                 \whenrole{ai}{Python, RAG Systems, Ollama, Hybrid Retrieval, Signal Processing, Statistical Modeling, Data Analysis, Technical Training, Curriculum Design, PyTorch, Pandas, NumPy, Sensor Fusion, ML Pipeline Development, CI/CD, GitHub Actions, Grafana, Data Visualization, Technical Documentation, Knowledge Transfer, Proof-of-Concept Development, System Architecture, Medical AI Applications}%
+                 \whenrole{consulting}{Technical Strategy, Cross-functional Coordination, Regulatory Compliance, Stakeholder Communication, Strategic Consulting, Proof-of-Concept Development, Technical Training, Team Development, Change Management, Innovation Leadership, Client Presentations, Ethical Technology Development}%
+                 \whenrole{general}{System Architecture, Python, Technical Leadership, Proof-of-Concept Development, Risk Management, Requirement Engineering, Team Mentoring, Cross-functional Communication, HIL Testing, Statistical Analysis}
+                 }
   \emptySeparator
+    \experience
+      {March 2022}{Research Project Student Intern}{ADEPT Neuro SA}{(Ref. Dr. Jason Ruan)}
+      {September 2021}{
+        \begin{itemize}
+          \whenrole{firmware}{
+            \item Developed and integrated software (C \& Python)/hardware (VHDL) interfaces and embedded drivers for ASIC-enabled neural electrodes, managing 300+ parallel signal channels at 50-60 Hz sampling rates
+          }
+          \whenrole{general}{
+            \item Developed and integrated software (Python)/hardware (FPGA) interfaces for analog medical devices, ensuring compliance with Quality System requirements
+          }
+          \whenrole{consulting}{
+            \item Developed and integrated software (Python)/hardware (FPGA) interfaces for novel medical devices, ensuring compliance with Quality System requirements and demonstrating ethical technology development practices
+          }
+          
+          \whenrole{consulting}{
+            \item Led implementation and comprehensive documentation of research-grade medical device prototypes, bridging complex technical concepts with regulatory compliance requirements
+          }
+          \whenrole{firmware}{
+            \item Led implementation and documentation of research-grade medical device prototypes in startup R&D environment at EPFL Innovation Park
+          }
+          \whenrole{general}{
+            \item Led implementation and documentation of research-grade medical device prototypes
+          }
+          
+          \whenrole{consulting}{
+            \item Collaborated with multidisciplinary R\&D team while maintaining regulatory standards, demonstrating ability to work within ethical and compliance frameworks
+          }
+          \whenrole{firmware}{
+            \item Collaborated with multidisciplinary R\&D team while ensuring compliance with medical device Quality System requirements and regulatory standards
+          }
+          \whenrole{general}{
+            \item Collaborated with R\&D team on medical device development projects while maintaining regulatory standards
+          }
+          \whenrole{ai}{
+            \item Performed time series analysis on 300+ parallel neural signals at 50-60Hz for epilepsy onset detection, implementing feature extraction algorithms for medical diagnostic applications
+            \item Developed signal processing pipelines using Python visualization libraries for ASIC-based neural electrode data acquisition and analysis
+            \item Applied machine learning approaches to biomedical signal processing in regulated healthcare research environment
+}
+        \end{itemize}
+      }
+      {\whenrole{firmware}{Hardware-Software Integration, ASIC Integration, VHDL, C/C++, Python, Medical Device Development, Multi-channel Signal Processing, Quality Systems, R\&D, Technical Documentation, Neural Interface Systems}%
+       \whenrole{consulting}{Medical Device R\&D, Regulatory Compliance, Technical Documentation, Interdisciplinary Collaboration, Ethical Technology Development}%
+       \whenrole{general}{Medical Prototype Development, Hardware-Software Integration, Quality Systems, R\&D, Technical Documentation, Signal Processing}
+       \whenrole{ai}{Time Series Analysis, Feature Extraction, Medical Signal Processing, Python, Data Visualization, Epilepsy Detection, Neural Signal Analysis, Healthcare AI, Biomedical Data Science, Medical Device Prototypes, Regulatory Compliance, Neuroscience Applications, ASIC Integration, Multi-channel Data Processing, Machine Learning Applications}}
+    \emptySeparator
+    \whennotrole{ai}{
   \experience
     {August 2022}   {Technical Consultant (Freelance)}{\whenrole{consulting}{Bleu Lézard Cultural Establishment}\whenrole{general}{Bleu Lézard Restaurant}\whenrole{firmware}{Bleu Lézard Restaurant}}{Lausanne}
     {July 2022} {
@@ -40,32 +111,39 @@
                         \whenrole{firmware}{\item Provided comprehensive documentation and training ensuring client technical autonomy}
                       \end{itemize}
                     }
-                    {\whenrole{consulting}{Technical Consulting, Client Relations, Needs Assessment, Solution Architecture, Knowledge Transfer, Project Management}\whenrole{general}{Project Management, Client Relations, Technical Architecture, Documentation, Knowledge Transfer}\whenrole{firmware}{Project Management, Client Relations, Technical Architecture, Documentation, Knowledge Transfer}}
-  \emptySeparator
+                    {\whenrole{consulting}{Technical Consulting, Client Relations, Needs Assessment, Solution Architecture, Knowledge Transfer, Project Management}\whenrole{general}{Project Management, Client Relations, Technical Architecture, Documentation, Knowledge Transfer}\whenrole{firmware}{Project Management, Client Relations, Technical Architecture, Documentation, Knowledge Transfer}} 
+\emptySeparator
+}
   \experience
-    {March 2022}   {Research Project Student Intern}{ADEPT Neuro SA}{(Ref. Dr. Jason Ruan)}
-    {September 2021} {
-                      \begin{itemize}
-                        \item Developed and integrated software\whenrole{firmware}{ (C \& Python)}\whenrole{consulting}{ (Python)}\whenrole{general}{ (Python)}/hardware\whenrole{firmware}{ (VHDL)}\whenrole{general}{ (FPGA)} interfaces\whenrole{firmware}{ and embedded drivers} for\whenrole{firmware}{analog medical devices}\whenrole{consulting}{novel medical devices}\whenrole{general}{analog medical devices}, ensuring\whenrole{firmware}{seamless hardware-software integration and }compliance with Quality System requirements\whenrole{consulting}{ and demonstrating ethical technology development practices}
-                        \item Led implementation and\whenrole{consulting}{ comprehensive} documentation of research-grade medical device prototypes\whenrole{consulting}{, bridging complex technical concepts with regulatory compliance requirements}
-                        \item Collaborated with\whenrole{consulting}{multidisciplinary }R\&D team\whenrole{consulting}{ while}\whenrole{general}{ on medical device development projects while}\whenrole{firmware}{ on medical device development projects while} maintaining regulatory standards\whenrole{consulting}{, demonstrating ability to work within ethical and compliance frameworks}
-                      \end{itemize}
-                    }
-                    {\whenrole{firmware}{Medical Device Development, Hardware-Software Integration, R\&D, Technical Documentation, Signal Processing, STM32, FPGA, C/C++, Python, VHDL, SDLC}\whenrole{consulting}{Medical AI Applications, Hardware-Software Integration, Regulatory Compliance, Technical Documentation, Interdisciplinary Collaboration}\whenrole{general}{Medical Prototype Development, Hardware-Software Integration, Quality Systems, R\&D, Technical Documentation, Signal Processing}}
-  \emptySeparator
-  \experience
-    {August 2021}   {Digital Week\whenrole{firmware}{ Assistant - ML Education Lead}\whenrole{consulting}{ Assistant - ML Education Lead}\whenrole{general}{ Student Assistant - ML Education Lead}}{IMD Business School}{(Ref. Marc Chauvet)}
-    {July 2018} {
-                      \begin{itemize}
-                        \item Led\whenrole{consulting}{ technical team of seven assistants and delivered comprehensive AI/ML training to over 100 international MBA students, demonstrating exceptional ability to make complex technical concepts accessible to diverse, non-technical audiences}\whenrole{ai}{ technical team of seven assistants and delivered comprehensive AI/ML training to over 100 international MBA students, demonstrating exceptional ability to translate cutting-edge ML concepts for business applications}\whenrole{firmware}{ technical team of seven assistants and delivered comprehensive training to over 100 international MBA students, demonstrating excellent communication skills with clarity and impact across diverse, non-technical audiences}\whenrole{general}{ and coordinated team of seven assistants during Digital Week programs, consistently receiving outstanding feedback from IMD Business School leadership}
-                        \whenrole{consulting}{\item Designed and facilitated educational curriculum covering Python ecosystem, machine learning fundamentals, and practical business applications, consistently receiving outstanding feedback from both students and institutional leadership}
-                        \whenrole{ai}{\item Designed and delivered hands-on AI/ML curriculum featuring PyTorch, TensorFlow, and real-world data science applications, achieving exceptional student engagement and learning outcomes}
-                        \whenrole{general}{\item Delivered comprehensive ML and data analysis training to over 100 MBA students, utilizing Python ecosystem including Pandas, NumPy, and TensorFlow}
-                        \whenrole{consulting}{\item Managed cross-cultural educational delivery in English, adapting teaching methodology to accommodate varied professional backgrounds and learning styles}
-                        \whenrole{ai}{\item Demonstrated advanced pedagogical skills in technical education, bridging complex AI concepts with practical business applications for diverse international audiences}
-                      \end{itemize}
-                    }
-                    {\whenrole{firmware}{Technical Leadership, Cross-cultural Communication, Stakeholder Engagement,Client-facing Communication, Collaborative Communication Skills, Python}\whenrole{consulting}{AI/ML Training, Cross-cultural Communication, Curriculum Design, Team Leadership, Stakeholder Management}\whenrole{ai}{AI/ML Education, PyTorch, TensorFlow, Curriculum Design, Technical Training, Cross-cultural Communication, Team Leadership, Pedagogical Innovation}\whenrole{general}{Team Leadership, Machine Learning, Python, Data Analysis, Teaching, TensorFlow, Pandas, NumPy, Client-facing Communication Skills, Collaborative Communication Skills}}
+  {August 2021}{Digital Week\whenrole{firmware}{ Assistant - ML Education Lead}\whenrole{consulting}{ Assistant - ML Education Lead}\whenrole{general}{ Student Assistant - ML Education Lead}}{IMD Business School}{(Ref. Marc Chauvet)}
+  {July 2018}{
+    \begin{itemize}
+      \whenrole{ai}{
+        \item Led technical team of seven assistants and delivered comprehensive AI/ML training to 100+ international MBA students, maintaining 4.8/5.0 satisfaction rating and achieving 95\% course completion rate
+        \item Designed hands-on curriculum covering supervised learning, regression models, and web scraping using Python (PyTorch, TensorFlow, Pandas, NumPy) with real-world business applications
+        \item Implemented practical ML projects including price prediction models and Yahoo Finance ticker analysis, culminating in student presentations of ML-powered business products to executive audiences
+        \item Demonstrated advanced pedagogical skills in technical education, successfully translating complex ML algorithms into actionable business insights for diverse international professional backgrounds
+      }
+      \whenrole{consulting}{
+        \item Led technical team of seven assistants and delivered comprehensive AI/ML training to 100+ international MBA students, demonstrating exceptional ability to make complex technical concepts accessible to diverse, non-technical business leaders
+        \item Designed and facilitated 40-hour educational curriculum achieving 4.8/5.0 satisfaction rating and 95\% completion rate, covering Python ecosystem, machine learning fundamentals, and practical business applications
+        \item Managed cross-cultural educational delivery across 4 consecutive years, adapting teaching methodology to accommodate varied professional backgrounds while maintaining consistently outstanding feedback from institutional leadership
+        \item Developed hands-on business case studies including Airbnb pricing optimization and financial market analysis, enabling students to present ML-powered business solutions to executive stakeholders
+      }
+      \whenrole{firmware}{
+        \item Led technical team of seven assistants and delivered comprehensive training to 100+ international MBA students over 4 consecutive years, demonstrating excellent communication skills with clarity and impact across diverse, non-technical audiences
+        \item Created practical training curriculum achieving 4.8/5.0 satisfaction rating, successfully teaching complex technical concepts including Python programming and data analysis to business professionals
+      }
+      \whenrole{general}{
+        \item Led and coordinated team of seven assistants during Digital Week programs over 4 consecutive years, consistently receiving outstanding feedback from IMD Business School leadership
+        \item Delivered comprehensive ML and data analysis training to 100+ MBA students achieving 4.8/5.0 satisfaction rating, utilizing Python ecosystem including Pandas, NumPy, and TensorFlow for hands-on business applications
+      }
+    \end{itemize}
+  }
+  {\whenrole{firmware}{Technical Leadership, Cross-cultural Communication, Stakeholder Engagement, Client-facing Communication, Curriculum Design, Python, Technical Training}%
+   \whenrole{ai}{AI/ML Education, PyTorch, TensorFlow, Curriculum Design, Technical Training, Cross-cultural Communication, Team Leadership, Pedagogical Innovation, Supervised Learning, Regression Models, Web Scraping, Business Applications, Executive Presentations}%
+   \whenrole{consulting}{AI/ML Training, Cross-cultural Communication, Curriculum Design, Team Leadership, Stakeholder Management, Business Case Development, Executive Communication, Change Management}%
+   \whenrole{general}{Team Leadership, Machine Learning, Python, Data Analysis, Teaching, TensorFlow, Pandas, NumPy, Client-facing Communication Skills, Curriculum Design}}
   \emptySeparator
   \whenrole{firmware}{
   \experience

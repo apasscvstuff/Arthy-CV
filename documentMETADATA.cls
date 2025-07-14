@@ -314,6 +314,27 @@
 \newcommand{\cvtag}[1]{%
   \tikz[baseline]\node[anchor=base,draw=darkGrey!70,rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.3ex,text depth=.25ex]{#1};
 }
+ % Enhanced conditional-aware skills processor
+  \newcommand{\processconditionalskills}[1]{%
+    % Process conditionals and create clean comma-separated list
+    \begingroup
+    \makeatletter
+    \def\@skillslist{}%
+    \def\@firstskill{true}%
+    % Expand the input to resolve all conditionals
+    \edef\@expandedskills{#1}%
+    % Parse the expanded result
+    \foreach \@skill in \@expandedskills {%
+      % Only process non-empty skills
+      \expandafter\ifx\expandafter\relax\@skill\relax\else%
+        \if\@skill\empty\else%
+          \cvtag{\@skill}%
+        \fi%
+      \fi%
+    }%
+    \makeatother
+    \endgroup
+  }
 
 % Render author's name
 % Usage: \user{<firstanme>}{<lastname>}
@@ -519,7 +540,7 @@
   \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
   					         #6
                    \end{minipage}										\\*
-                 & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
+                 & \footnotesize{\processconditionalskills{#7}} 	\\
   }
 
 % Render a consultant experience in the experiences environment
