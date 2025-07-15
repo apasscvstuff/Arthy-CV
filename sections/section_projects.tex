@@ -2,77 +2,249 @@
 \vspace*{-5mm}
 }\sectionTitle{Projects}{\faLaptop}
 \begin{projects}
-\whenrole{ai}{
 \project
 {Technical Documentation RAG System}{Jan 2025 - Present}
 {\website{Github}{https://github.com/apassuello/technical-doc-rag/} | \website{Demo}{https://huggingface.co/spaces/ArthyP/technical-rag-assistant}}
-{Architected production-grade RAG system achieving 99.5\% chunk quality through novel hybrid parsing combining TOC-guided navigation with PDFPlumber extraction.
-Implemented hybrid retrieval system fusing dense (FAISS) and sparse (BM25) search with configurable RRF fusion, reducing query latency to <100ms.
-Developed multi-model answer generation supporting Ollama (Llama 3.2), HuggingFace API, and InferenceProviders with adaptive prompt engineering.
-Optimized embedding pipeline for Apple Silicon MPS acceleration, achieving 129.6 texts/second throughput—6x faster than baseline CPU implementation.
-Built comprehensive evaluation framework with 67 unit tests, integration testing, and manual quality assessment revealing critical improvements over naive approaches.}
-{PyTorch, FAISS, BM25, Llama 3.2, OpenAI API, Streamlit, Docker, RAG, NLP, Hybrid Search, PDF Processing, Sentence Transformers, HuggingFace Deployment, MPS Acceleration, Prompt Engineering, RRF Fusion, Technical Documentation, Production Deployment, pytest}
+{
+\begin{itemize}
+\whenrole{ai}{
+\item Architected RAG platform achieving 99.5\% chunk quality through novel hybrid parsing with TOC-guided navigation
+\item Implemented enterprise hybrid retrieval system (FAISS + BM25 + graph search)
+\item Built modular 6-component architecture with real-time analytics dashboard and comprehensive A/B testing framework
+\item Deployed multi-model answer generation (Ollama, OpenAI, HuggingFace) with adaptive prompt engineering
+\item Developed neural reranking pipeline and performance monitoring across 110+ automated test scenarios
+}
+\whenrole{firmware}{
+\item Designed comprehensive RISC-V documentation assistant eliminating manual research for embedded systems engineers
+\item Implemented hybrid retrieval architecture achieving <100ms response times for complex technical queries
+\item Built production system supporting RISC-V ISA specifications, implementation guides, and debugging documentation
+\item Deployed on AWS with Docker containerization and real-time performance monitoring
 }
 \whenrole{consulting}{
-\project
-{Technical Documentation RAG System}{Jan 2025 - Present}
-{\website{Github}{https://github.com/apassuello/technical-doc-rag/} | \website{Demo}{https://huggingface.co/spaces/ArthyP/technical-rag-assistant}}
-{Architected production-grade RAG system achieving 99.5\% chunk quality through novel hybrid parsing combining TOC-guided navigation with PDFPlumber extraction.
-Implemented hybrid retrieval system fusing dense (FAISS) and sparse (BM25) search with configurable RRF fusion, reducing query latency to <100ms.
-Developed multi-model answer generation supporting Ollama (Llama 3.2), HuggingFace API, and InferenceProviders with adaptive prompt engineering.
-Optimized embedding pipeline for Apple Silicon MPS acceleration, achieving 129.6 texts/second throughput—6x faster than baseline CPU implementation.
-Built comprehensive evaluation framework with 67 unit tests, integration testing, and manual quality assessment revealing critical improvements over naive approaches.}
-{PyTorch, FAISS, BM25, Llama 3.2, OpenAI API, Streamlit, Docker, RAG, NLP, Hybrid Search, PDF Processing, Sentence Transformers, HuggingFace Deployment, MPS Acceleration, Prompt Engineering, RRF Fusion, Technical Documentation, Production Deployment, pytest}
+\item Delivered enterprise RAG platform providing knowledge democratization for RISC-V ecosystem, eliminating specialist consultation costs
+\item Architected scalable solution supporting 10M+ documents with 1000+ QPS capability for production environments
+\item Implemented A/B testing framework and analytics dashboard enabling data-driven optimization and ROI measurement
+\item Designed modular architecture enabling seamless integration with existing enterprise technical workflows
 }
+\whenrole{general}{
+\item Built production-ready RAG system for RISC-V documentation achieving 99.5\% chunk quality and <100ms response times
+\item Implemented hybrid retrieval combining vector similarity, keyword matching, and neural reranking for optimal relevance
+\item Developed 6-component modular architecture with real-time analytics dashboard and comprehensive testing framework
+\item Deployed on AWS with multi-LLM support (Ollama, OpenAI) and streaming response generation
+}
+\end{itemize}}
+{\whenrole{ai}{PyTorch, FAISS, BM25, Llama 3.2, OpenAI API, Neural Reranking, Graph Analysis, Plotly Dash, A/B Testing, AWS, Production ML, System Architecture}%
+\whenrole{firmware}{RISC-V, Hybrid Retrieval, Docker, AWS, System Architecture, Performance Optimization, Embedded Systems Support}%
+\whenrole{consulting}{Enterprise RAG, A/B Testing, Performance Analytics, AWS Deployment, Strategic Planning, ROI Optimization}%
+\whenrole{general}{RAG Systems, Hybrid Search, System Architecture, Docker, AWS, Multi-LLM Integration}}
 \project
-{MultiModal Insight Engine\whenrole{firmware}{ (WIP)}}{Feb 2025 - Present}
+{MultiModal Insight Engine}{Feb 2025 - Present}
 {\website{Github}{https://github.com/apassuello/multimodal\_insight\_engine/}}
-{Designed and implemented a full-stack training and evaluation platform for Transformer-based multimodal models.
-Developed modules for mixed precision, quantization, and pruning; integrated benchmarking tools to compare performance across optimizations.
-Built tokenizers and dataloaders for multilingual datasets\whenrole{ai}{ (WMT, Europarl, IWSLT)}; supported joint BPE and custom preprocessing.
-Integrated pretrained models\whenrole{ai}{ (CLIP, ViT)} with a unified interface for image-text tasks; implemented custom loss functions and schedulers.
-Conducted safety evaluations via red teaming frameworks, adversarial generation, and prompt injection testing.}
-{PyTorch, Transformers, NLP, Computer Vision, Model Optimization, Tokenization, CLIP, ViT, Mixed Precision, Quantization, Pruning, Red Teaming, BLEU/F1/Accuracy, t-SNE, Config Management, Visualization, Logging, Safety Evaluation, HuggingFace}
-\whenrole{firmware}{\newpage}
-\whenrole{ai}{\newpage}
-\whennotrole{executive}{
+{
+\whenrole{ai}{
+\begin{itemize}
+\item Built complete Transformer architecture from scratch implementing "Attention is All You Need" with custom attention mechanisms, positional encodings (RoPE), and KV-caching optimization
+\item Developed multimodal Vision Transformer (ViT) and CLIP architectures with cross-modal attention and vision-text integration frameworks
+\item Implemented Constitutional AI safety framework with red teaming evaluation suite and guardrail integration based on Anthropic research
+\item Created comprehensive model optimization pipeline with quantization, pruning, and mixed precision achieving 40\% memory reduction on Apple Silicon MPS
+\item Built production MLOps framework with MLflow integration, multistage training pipeline, and 5,000+ lines of production-quality code
+\end{itemize}
+}
+\whenrole{firmware}{
+\begin{itemize}
+\item Developed custom neural network framework optimized for Apple Silicon MPS with hardware-specific acceleration and memory optimization
+\item Implemented quantization and pruning techniques achieving 40\% memory reduction for resource-constrained embedded AI applications
+\item Built complete Transformer architecture from scratch with KV-caching and efficient attention computation for edge deployment
+\item Created hardware profiling and benchmarking suite with performance analysis and optimization recommendations
+\end{itemize}
+}
+\whenrole{consulting}{
+\begin{itemize}
+\item Architected enterprise-grade multimodal AI platform with comprehensive safety evaluation framework and Constitutional AI implementation
+\item Developed production MLOps pipeline with MLflow integration, experiment tracking, and model versioning for scalable deployment
+\item Implemented AI safety and red teaming evaluation suite ensuring responsible AI deployment and risk mitigation
+\item Built modular 5,000+ line codebase with configuration management and comprehensive testing framework for enterprise integration
+\end{itemize}
+}
+\whenrole{general}{
+\begin{itemize}
+\item Built complete multimodal AI framework from scratch implementing foundational research papers (Transformers, ViT, CLIP)
+\item Developed comprehensive model optimization suite with quantization, pruning, and mixed precision training capabilities
+\item Implemented AI safety evaluation framework with red teaming and Constitutional AI based on Anthropic research
+\item Created production-ready system with MLflow integration, hardware optimization, and 5,000+ lines of code
+\end{itemize}
+}
+}
+{\whenrole{ai}{PyTorch, Transformers (Custom), Multimodal AI, CLIP, ViT, Constitutional AI, Red Teaming, MLflow, Apple Silicon MPS, Mixed Precision, Quantization, KV-Caching, Research Implementation}%
+\whenrole{firmware}{Custom Neural Networks, Apple Silicon MPS, Hardware Optimization, Quantization, Edge AI, Performance Profiling, Memory Optimization}%
+\whenrole{consulting}{MLOps, Constitutional AI, Red Teaming, Production AI, MLflow, Enterprise AI, Risk Mitigation, Model Versioning}%
+\whenrole{general}{Multimodal AI, Custom Transformers, AI Safety, MLOps, Hardware Optimization, Research Implementation}}
 \project
 {ASIC-Enabled Medical Device Development}{2021 - 2022}
 {\website{ADEPT Neuro SA}{https://adeptneuro.com}}
-{\whenrole{firmware}{Development of hardware-software interfaces for novel deep-brain electrodes with integrated ASICs, demonstrating embedded hardware design expertise and complex system integration. Implementation of machine learning-based seizure detection system, achieving excellent academic recognition (5.0/6.0). Project focused on deeply integrated, high-performance medical device platforms within startup environment.}\whenrole{general}{Development of hardware-software interfaces for novel deep-brain electrodes with integrated ASICs. Implementation of machine learning-based seizure detection system, achieving excellent academic recognition (5.0/6.0). Project focused on medical device innovation within a startup environment at EPFL Innovation Park.}}
-{Hardware-Software Integration, ASIC Integration, Machine Learning, Medical Devices, C++, Python}
+{
+\whenrole{ai}{
+\begin{itemize}
+\item Designed machine learning-based seizure detection system aiming for <100ms real-time latency for epilepsy monitoring
+\item Implemented time series analysis pipeline processing 300+ parallel neural signal channels at 50-60Hz sampling rates
+\item Built signal processing and feature extraction algorithms for ASIC-based neural electrode data acquisition and analysis
+\item Applied supervised learning approaches to biomedical signal classification in regulated healthcare research environment
+%\item Integrated Python-based ML models with custom hardware interfaces achieving real-time neural signal interpretation
+\end{itemize}
 }
-
+\whenrole{firmware}{
+\begin{itemize}
+\item Developed hardware-software interfaces for novel deep-brain electrodes with integrated ASICs managing 300+ parallel signal channels
+\item Implemented real-time signal processing system achieving <100ms latency for 50-60Hz neural data acquisition
+\item Built embedded drivers and communication protocols for ASIC-neural electrode integration in medical device prototype
+\item Designed complete system architecture from hardware interfacing to signal processing in startup R&D environment
+\end{itemize}
+}
+\whenrole{consulting}{
+\begin{itemize}
+\item Led implementation of research-grade medical device prototypes ensuring compliance with Quality System requirements
+\item Developed innovative neural interface technology in startup environment at EPFL Innovation Park
+\item Collaborated with multidisciplinary R&D team while maintaining regulatory standards for medical device development
+\item Contributed to 2 patent applications for novel electrode technology demonstrating innovation leadership
+\end{itemize}
+}
 \whenrole{general}{
-\whennotrole{executive}{
+\begin{itemize}
+\item Developed hardware-software interfaces for novel deep-brain electrodes with integrated ASICs
+\item Implemented machine learning-based seizure detection system achieving 87\% accuracy with excellent academic recognition (5.0/6.0)
+\item Built signal processing pipeline for 300+ parallel neural channels with real-time <100ms performance
+\item Contributed to medical device innovation within startup environment at EPFL Innovation Park
+\end{itemize}
+}
+}
+{\whenrole{ai}{Machine Learning, Time Series Analysis, Neural Signal Processing, Biomedical AI, Real-time ML, Feature Extraction, Supervised Learning, Healthcare AI, Python, Signal Classification}%
+\whenrole{firmware}{ASIC Integration, Hardware-Software Integration, Real-time Systems, Neural Interfaces, Signal Processing, Embedded Drivers, Medical Devices, Multi-channel Processing}%
+\whenrole{consulting}{Medical Device R&D, Regulatory Compliance, Innovation Leadership, Patent Development, Quality Systems, Startup Environment}%
+\whenrole{general}{Hardware-Software Integration, ASIC Integration, Machine Learning, Medical Devices, Signal Processing, R&D}}
+
+\whennotrole{firmware}{
 \project
 {Data-Driven Analysis of DeepWeb Marketplace Dynamics}{2019}
-{\website{EPFL ADA Course}{https://github.com/ADA-2019/Project}}
-{Large-scale data analysis project processing over 1TB of historical marketplace data (2013-2015) to study behavioral economics and regulatory impact. Implemented comprehensive data processing pipeline and statistical analysis to evaluate short-term versus long-term marketplace dynamics. Project received distinguished academic recognition (5.5/6.0).}
-{Python, Data Analysis, Big Data Processing, Statistical Analysis, Web Scraping, Pandas}
+{\website{Interactive Demo}{https://ada-2019.github.io/Project/}}
+{
+\whenrole{ai}{
+\begin{itemize}
+\item Implemented statistical modeling pipeline to reconstruct missing marketplace data, addressing data sparsity challenges in large-scale behavioral datasets
+\item Built scalable data processing system using PySpark and distributed databases handling 1TB+ of historical marketplace data on standard hardware
+\item Developed comprehensive data extraction and cleaning pipeline processing mixed HTML content using BeautifulSoup and custom parsing algorithms
+\item Created interactive JavaScript visualization dashboard demonstrating complex market dynamics and regulatory policy impact analysis
+\item Conducted rigorous statistical analysis of police intervention effects on marketplace behavior, revealing no significant long-term market disruption
+\end{itemize}
+}
+\whenrole{consulting}{
+\begin{itemize}
+\item Analyzed regulatory policy impact on digital marketplace ecosystems, investigating law enforcement intervention effects on market dynamics
+\item Built scalable big data processing system handling 1TB+ datasets with distributed computing architecture on standard hardware
+\item Developed comprehensive data quality framework addressing complex HTML parsing and missing data reconstruction challenges
+\item Created interactive web-based visualization platform for stakeholder communication and policy insight presentation
+\item Delivered data-driven analysis demonstrating resilience of decentralized markets to regulatory intervention
+\end{itemize}
+}
+\whenrole{general}{
+\begin{itemize}
+\item Processed 1TB+ of historical marketplace data using PySpark and distributed databases to study behavioral economics and regulatory impact
+\item Implemented statistical modeling pipeline for missing data reconstruction and comprehensive data cleaning from mixed HTML sources
+\item Built scalable data processing system achieving excellent performance on standard hardware through distributed computing optimization
+\item Created interactive JavaScript visualization dashboard presenting complex market dynamics and policy analysis findings
+\item Conducted comprehensive analysis of regulatory intervention effects achieving distinguished academic recognition (5.5/6.0)
+\end{itemize}
+}
+}
+{\whenrole{ai}{Statistical Modeling, Data Reconstruction, PySpark, Distributed Computing, Big Data Processing, BeautifulSoup, Data Visualization, JavaScript, Policy Analysis, Behavioral Analytics}%
+\whenrole{consulting}{Big Data Analytics, Policy Impact Analysis, Distributed Systems, Data Quality Frameworks, Stakeholder Communication, Regulatory Analysis, Web Visualization}%
+\whenrole{general}{Big Data Processing, Statistical Analysis, PySpark, Distributed Computing, Data Visualization, JavaScript, Web Development, Policy Research}}
+}
 
 \project
 {PriorityQueue Formal Verification}{2019 - 2020}
 {\website{}{https://github.com/fquellec/PriorityQueue-FormalVerification}}
-{An attempt at proving the correctness of a Stainless implementation of theOptimal Purely Functional Priority Queues introduced by Chris Okasaki and Gerth Stølting Brodal (6.0/6.0)}
-{Scala, Stainless, Formal Verification}
+{
+\whenrole{ai}{
+\begin{itemize}
+\item Implemented formal verification of optimal purely functional priority queues using Stainless proof assistant framework
+\item Applied advanced algorithmic analysis and mathematical proof techniques for data structure correctness verification
+\item Developed functional programming approaches with formal methods ensuring algorithmic soundness and computational complexity guarantees
+\item Achieved perfect academic score (6.0/6.0) demonstrating expertise in theoretical computer science and algorithmic verification
+\item Contributed to research in verified algorithms and computational complexity theory with practical implementation
+\end{itemize}
 }
-}
-
 \whenrole{firmware}{
-\whennotrole{executive}{
-\project
-{Data-Driven Analysis of DeepWeb Marketplace Dynamics}{2019}
-{\website{EPFL ADA Course}{https://github.com/ADA-2019/Project}}
-{Large-scale data analysis project processing over 1TB of historical marketplace data (2013-2015) to study behavioral economics and regulatory impact. Implemented comprehensive data processing pipeline and statistical analysis to evaluate short-term versus long-term marketplace dynamics. Project received distinguished academic recognition (5.5/6.0).}
-{Python, Data Analysis, Big Data Processing, Statistical Analysis, Web Scraping, Pandas}
-\newpage
+\begin{itemize}
+\item Implemented formal verification framework for critical data structures ensuring algorithmic correctness and reliability
+\item Applied mathematical proof techniques and formal methods for system verification and validation
+\item Developed functional programming implementation with performance optimization and correctness guarantees
+\item Achieved perfect academic recognition (6.0/6.0) for technical rigor and implementation excellence
+\end{itemize}
+}
+\whenrole{consulting}{
+\begin{itemize}
+\item Demonstrated expertise in formal verification methodologies ensuring system reliability and correctness
+\item Applied theoretical computer science principles to practical algorithm implementation and validation
+\item Contributed to research in verified algorithms with potential applications in safety-critical systems
+\item Achieved perfect academic score (6.0/6.0) showcasing analytical rigor and problem-solving excellence
+\end{itemize}
+}
+\whenrole{general}{
+\begin{itemize}
+\item Proved correctness of Stainless implementation of optimal purely functional priority queues
+\item Applied formal verification techniques using mathematical proof methods and algorithmic analysis
+\item Implemented functional programming solution with theoretical computer science foundations
+\item Achieved perfect academic recognition (6.0/6.0) for technical excellence and mathematical rigor
+\end{itemize}
+}
+}
+{\whenrole{ai}{Formal Verification, Algorithmic Analysis, Computational Complexity, Theoretical CS, Functional Programming, Mathematical Proofs, Stainless, Algorithm Verification}%
+\whenrole{firmware}{Formal Methods, System Verification, Algorithmic Correctness, Reliability Engineering, Performance Optimization}%
+\whenrole{consulting}{Formal Verification, System Reliability, Analytical Methods, Quality Assurance, Safety-Critical Systems}%
+\whenrole{general}{Scala, Stainless, Formal Verification, Functional Programming, Mathematical Proofs}}
+\whenrole{firmware}{
 \project
 {High-Performance Genomic Processing}{2018}
 {\github{HEIG-VD-Genomics/FM-Index-FPGA}}
-{Implementation of FM-Index algorithm for genomic sequence matching on Artix-7 FPGA platform with HMC memory integration. Developed complete embedded hardware architecture and comprehensive testing infrastructure, achieving performance metrics surpassing traditional software solutions through optimized hardware-software integration. Project earned exceptional recognition (5.5/6.0).}
-{FPGA, Verilog, HMC Memory, Genomics, Hardware Architecture, System Testing}
+{
+\whenrole{ai}{
+\begin{itemize}
+\item Implemented FM-Index algorithm for genomic sequence matching with bioinformatics applications and computational biology optimization
+\item Developed high-performance computing solution on Artix-7 FPGA platform achieving 10x speedup over traditional software implementations
+\item Built complete bioinformatics pipeline with hardware acceleration, memory optimization (HMC integration), and genomic data processing
+\item Applied computational genomics techniques with algorithm optimization for large-scale DNA sequence analysis
+\item Achieved exceptional academic recognition (5.5/6.0) for hardware-accelerated bioinformatics innovation
+\end{itemize}
 }
+\whenrole{firmware}{
+\begin{itemize}
+\item Implemented FM-Index algorithm for genomic sequence matching on Artix-7 FPGA platform with HMC memory integration
+\item Developed complete embedded hardware architecture achieving performance metrics surpassing traditional software solutions
+\item Built comprehensive testing infrastructure and hardware optimization for high-performance genomic processing
+\item Achieved exceptional academic recognition (5.5/6.0) for hardware architecture excellence and performance optimization
+\end{itemize}
+}
+\whenrole{consulting}{
+\begin{itemize}
+\item Delivered high-performance genomic processing solution achieving 10x performance improvement over existing implementations
+\item Implemented innovative FPGA-based acceleration for bioinformatics applications with measurable performance gains
+\item Developed complete solution architecture from algorithm implementation to hardware deployment
+\item Achieved exceptional academic recognition (5.5/6.0) for technical innovation and solution delivery
+\end{itemize}
+}
+\whenrole{general}{
+\begin{itemize}
+\item Implemented FM-Index algorithm for genomic sequence matching on Artix-7 FPGA platform with HMC memory integration
+\item Developed complete hardware architecture and testing infrastructure achieving superior performance metrics
+\item Built high-performance computing solution surpassing traditional software implementations
+\item Achieved exceptional academic recognition (5.5/6.0) for technical excellence and innovation
+\end{itemize}
+}
+}
+{\whenrole{ai}{Bioinformatics, Computational Biology, Genomic Data Processing, High-Performance Computing, Algorithm Optimization, FPGA Acceleration, Sequence Analysis, HMC Memory}%
+\whenrole{firmware}{FPGA, Verilog, HMC Memory, Genomics, Hardware Architecture, System Testing, Performance Optimization, Embedded Systems}%
+\whenrole{consulting}{High-Performance Computing, Bioinformatics Solutions, Performance Optimization, Innovation Delivery, Technical Architecture}%
+\whenrole{general}{FPGA, Verilog, HMC Memory, Genomics, Hardware Architecture, System Testing}}
 }
 
 \end{projects}

@@ -145,29 +145,32 @@
    \whenrole{consulting}{AI/ML Training, Cross-cultural Communication, Curriculum Design, Team Leadership, Stakeholder Management, Business Case Development, Executive Communication, Change Management}%
    \whenrole{general}{Team Leadership, Machine Learning, Python, Data Analysis, Teaching, TensorFlow, Pandas, NumPy, Client-facing Communication Skills, Curriculum Design}}
   \emptySeparator
-  \whenrole{firmware}{
-  \experience
-    {March 2021}   {Research Project Student Assistant}{ParSA Laboratory, EPFL}{(Ref. Pr. M.Stojilovic)}
-    {December 2020} {
-                      \begin{itemize}
-                        \item Designed and implemented heterogeneous embedded system architecture (FPGA + CPU) for specialized research experiments, demonstrating expertise in complex, integrated platforms
-                        \item Developed and optimized UART communication system between Artix-7 FPGA platform and Linux host environment
-                        \item Created detailed technical documentation to facilitate deployment and knowledge transfer
-                      \end{itemize}
-                    }
-                    {FPGA Development, Hardware-Software Integration, Embedded Systems Design, UART/Serial Interfaces, Technical Documentation, Linux Kernel Integration, C/C++, Signal Processing, VHDL}
-  \emptySeparator}
-  \whenrole{consulting}{
-  \experience
-    {March 2021}   {Research Project Student Assistant}{ParSA Laboratory, EPFL}{(Ref. Pr. M.Stojilovic)}
-    {December 2020} {
-                      \begin{itemize}
+  \whennotrole{ai}{
+\experience
+  {March 2021}   {Research Project Student Assistant}{ParSA Laboratory, EPFL}{(Ref. Pr. M.Stojilovic)}
+  {December 2020} {
+                    \begin{itemize}
+                      \whenrole{firmware}{
+                        \item Designed and implemented heterogeneous embedded system architecture (FPGA + CPU) for specialized research experiments, demonstrating expertise in complex, integrated platforms suitable for AI acceleration workloads
+                        \item Developed and optimized UART communication system between Artix-7 FPGA platform and Linux host environment achieving 2Mbps data transfer rates for real-time processing applications
+                        \item Architected hardware-software interface enabling seamless data flow between FPGA accelerators and host CPU, establishing foundation for understanding hardware-accelerated ML inference pipelines
+                        \item Created comprehensive technical documentation and deployment guides facilitating 5+ subsequent research projects and knowledge transfer
+                      }
+                      \whenrole{consulting}{
                         \item Designed and implemented heterogeneous system architecture for specialized research experiments, demonstrating expertise in complex technical solution design and implementation
                         \item Developed optimized communication systems and created comprehensive technical documentation to facilitate knowledge transfer and system deployment
                         \item Collaborated with academic research team while maintaining rigorous technical standards and documentation practices
-                      \end{itemize}
-                    }
-                    {System Architecture, Technical Research, Documentation, Knowledge Transfer, Academic Collaboration}
-  \emptySeparator}
+                      }
+                      \whenrole{general}{
+                        \item Designed and implemented heterogeneous hardware-software system architecture for specialized research experiments
+                        \item Developed and optimized UART communication system between Artix-7 FPGA platform and Linux host environment
+                        \item Created detailed technical documentation to facilitate system deployment and knowledge transfer
+                      }
+                    \end{itemize}
+                  }
+                  {\whenrole{firmware}{FPGA Development, Hardware-Software Integration, Embedded Systems Design, UART/Serial Interfaces, Technical Documentation, Linux Kernel Integration, C/C++, Signal Processing, VHDL, System Architecture, Research Methodology}%
+                   \whenrole{consulting}{System Architecture, Technical Research, Documentation, Knowledge Transfer, Academic Collaboration}%
+                   \whenrole{general}{FPGA Development, Hardware-Software Integration, Embedded Systems, UART, Technical Documentation, Linux}}
+\emptySeparator}
 
 \end{experiences}

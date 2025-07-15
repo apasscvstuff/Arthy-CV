@@ -336,6 +336,12 @@
     \endgroup
   }
 
+   \newcommand{\processprojectskills}[1]{%
+    \foreach \n in {#1}{%
+      \ifx\n\empty\else\cvtag{\n}\fi%
+    }%
+  }
+
 % Render author's name
 % Usage: \user{<firstanme>}{<lastname>}
 \newcommand\user[2]{\color{accentcolor}{\LARGE #1 \textsc{\textbf{#2}}}\color{Black}}
@@ -577,15 +583,19 @@
 %   {<link1> <link2>}
 %   {<Project description>}
 %   {<techno1>,<techno2>}
-\newcommand\project[5]{
-  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
-    \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
-    #3\\
-    #4\smallskip\\
-    \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
-  \end{minipage}
-  \\*
-}
+ \newcommand\project[5]{
+    \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+      \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
+      #3\\
+      \begin{minipage}[t]{\textwidth}
+        #4
+      \end{minipage}
+      \smallskip\\
+       \footnotesize{\processconditionalskills{#5}}\\
+    \end{minipage}
+    \\*
+  }
+
 
 
 \newcommand*\twocolumnsection[2]{
